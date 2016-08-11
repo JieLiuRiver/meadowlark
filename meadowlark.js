@@ -105,6 +105,196 @@ app.listen(app.get('port'), function(){
 			然后：创建一个myModule01.js,
 			注意，要把函数加到exports上，才能让其在模块外可见。
 			最后，在主文件里，引入自己的模块。
+
+	19、响应对象常用的属性和方法
+		1)、res.status(code)	
+			设置http状态码
+			而对于重定向(状态码301、302、303、307),有一个更好的方法：redirect
+
+		2)、res.cookie(name, value, [options]);
+			res.clearCookie(name,[options]);
+			设置或者清除客户端cookies值，需要中间件支持。
+
+		3）、res.redirect([status], url)
+		重定向浏览器。 默认重定向代码是302
+		通常，应减少重定向。
+		
+		4）、res.send(body)
+			 res.send(status, body);
+			 向客户端发送响应以及可选的状态码。
+			 Express默认内容类型text/html
+			 如果想改，需要在res.send之前调用
+			 	res.set('Content-Type','text/plain\');
+
+			 如果body是一个对象或者数组，响应会以json发送，推荐调用res.json
+
+		5)、res.json(json)
+			res.json(status, json)
+			向客户端发送Json以及可选的状态码
+
+		6）、res.jsonp(json)
+			 res.jsonp(status,json)
+			 想客户端发送Jsonp
+
+		7）、res.type(type)
+			设置Content-Type头信息。
+			相当于res.set("Content-Type","type")
+		
+		8)、 res.format(object)
+		根据接受请求报文发送不同的内容，例如：
+			res.format({ 'text/plain':'hi', 'text/html' : '<b>hi</b>' })
+
+		9)、res.attachment([filename])
+			res.download(path,[filename],[callback])
+			将响应报头Content-Disposition 设为attachment
+			浏览器就会选下载而不是展现内容。
+			可以指定filename 给浏览器作为对用户的提示
+			需要将内容发送到客户端
+
+		10）、res.sendFile(path,[option],[callback])
+			  根据路径读取指定文件
+			  将内容发送到客户端
+
+		11）、res.locals
+			  res.render(view,[locals],callback)
+			  res.locals 是一个对象，包含用于渲染视图的默认上下文
+			  res.render 使用配置的模板引擎渲染视图
+
+		
+		12）、内容渲染
+
+			示例6-1　基本用法
+			// 基本用法
+			app.get('/about', function(req, res){
+				res.render('about');
+			});
+
+			示例6-2　200 以外的响应代码
+			app.get('/error', function(req, res){
+				res.status(500);
+				res.render('error');
+			});
+			// 或是一行……
+			app.get('/error', function(req, res){
+				res.status(500).render('error');
+			});
+
+			示例6-3　将上下文传递给视图，包括查询字符串、cookie 和session 值
+			app.get('/greeting', function(req, res){
+				res.render('about', {
+				message: 'welcome',
+				style: req.query.style,
+				userid: req.cookie.userid,
+				username: req.session.username,
+				});
+			});
+
+			示例6-4　没有布局的视图渲染
+			// 下面的layout 没有布局文件，即views/no-layout.handlebars
+			// 必须包含必要的HTML
+			app.get('/no-layout', function(req, res){
+				res.render('no-layout', { layout: null });
+			});
+
+			示例6-5　使用定制布局渲染视图
+			// 使用布局文件views/layouts/custom.handlebars
+			app.get('/custom-layout', function(req, res){
+				res.render('custom-layout', { layout: 'custom' });
+			});
+			渲染纯文本输出
+			app.get('/test', function(req, res){
+				res.type('text/plain');
+				res.send('this is a test');
+			});
+
+			示例6-7　添加错误处理程序
+			// 这应该出现在所有路由方法的结尾
+			// 需要注意的是，即使你不需要一个" 下一步" 方法
+			// 它也必须包含，以便Express 将它识别为一个错误处理程序
+			app.use(function(err, req, res, next){
+				console.error(err.stack);
+				res.status(500).render('error');
+			});
+
+			示例6-8　添加一个404 处理程序
+			// 这应该出现在所有路由方法的结尾
+			app.use(function(req, res){
+				res.status(404).render('not-found');
+			});
+
+
+		13）、处理表单
+			表单信息一般在req.body 中
+			偶尔在req.query
+			使用
+			req.xhr 来判断是AJAX 请求还是浏览请求
+			
+			示例6-9　基本表单处理
+			// 必须引入中间件body-parser
+			app.post('/process-contact', function(req, res){
+				console.log('Received contact from ' + req.body.name +
+				' <' + req.body.email + '>');
+				// 保存到数据库……
+				res.redirect(303, '/thank-you');
+			});
+
+			示例6-10　更强大的表单处理
+			// 必须引入中间件body-parser
+			app.post('/process-contact', function(req, res){
+				console.log('Received contact from ' + req.body.name +
+				' <' + req.body.email + '>');
+				try {
+					// 保存到数据库……
+					return res.xhr ?
+					res.render({ success: true }) :
+					res.redirect(303, '/thank-you');
+				} catch(ex) {
+					return res.xhr ?
+					res.json({ error: 'Database error.' }) :
+					res.redirect(303, '/database-error');
+				}
+			});
+
+			
+		14）、Handlebars模版引擎
+			之前用javascript生成html
+			js跟html混在一起，很混乱
+			格式不正确的，不容易发现
+			不能直观的分析
+			难以让别人读懂代码
+
+			这个时候模版解决了这个问题
+		
+			1、理解模版引擎的关键在于context上下文环境
+			当渲染一个模版的时候，会传递给模版引擎一个对象，叫做上下文对象
+			例如：	
+				如果上下文对象是 {name : 'hello'}
+				模版是 ： <p>say, {{name}}~!</p>
+				可以理解了把。
+
+			2、注释
+				{{ ! super-secret comment }}      这种不会传递到浏览器
+				<!-- not -so -secret commet -->    这种，查看Html源文件，能看到它在。
+
+			3、	块级表达式：
+				使用{{#each tours}}， 遍历一个数组。
+				当第一次循环的时候：
+					上下文是： { name: 'Hood River', price: '$99.95' }
+				第二次循环的时候：
+					上下文是： {name: 'Oregon Coast', price: '$159.95' }
+
+				
+				这个时候，想访问 currency对象，需要使用 ../来访问上一级上下文。
+				在if块中，又会产生一个新的上下文，这里的上下文，跟其上一级的上下文是相同的。
+				这个时候的访问，可能就会涉及到 ../../
+				那么这样会产生很多混乱， 最好的做法是在Each块中避免使用if块
+
+				在if 和each 块中都有一个可选的else 块（对于each，如果数组中没有任何元素，else
+				块就会执行）。我们也用到了unless 辅助方法，它基本上和if 辅助方法是相反的：只有在
+					参数为false 时，它才会执行。
+
+			
+			
 */
 
 
