@@ -1,0 +1,2049 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'express-session' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of G:\myServer\wamp\www\meadowlark\package.json
+5 warn package.json meadowlark@1.0.0 No description
+6 warn package.json meadowlark@1.0.0 No repository field.
+7 warn package.json meadowlark@1.0.0 No README data
+8 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\body-parser\package.json
+9 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\bower\package.json
+10 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\chai\package.json
+11 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\cookie-parser\package.json
+12 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\express\package.json
+13 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\express3-handlebars\package.json
+14 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\formidable\package.json
+15 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\grunt\package.json
+16 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\grunt-cafe-mocha\package.json
+17 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\grunt-contrib-jshint\package.json
+18 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\grunt-exec\package.json
+19 verbose installManyTop reading scoped package data from G:\myServer\wamp\www\meadowlark\node_modules\mocha\package.json
+20 info package.json formidable@1.0.17 No license field.
+21 info package.json express3-handlebars@0.5.2 No license field.
+22 info package.json grunt-cafe-mocha@0.1.13 No license field.
+23 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\package.json
+24 silly cache add args [ 'express-session', null ]
+25 verbose cache add spec express-session
+26 silly cache add parsed spec Result {
+26 silly cache add   raw: 'express-session',
+26 silly cache add   scope: null,
+26 silly cache add   name: 'express-session',
+26 silly cache add   rawSpec: '',
+26 silly cache add   spec: 'latest',
+26 silly cache add   type: 'tag' }
+27 silly addNamed express-session@latest
+28 verbose addNamed "latest" is being treated as a dist-tag for express-session
+29 info addNameTag [ 'express-session', 'latest' ]
+30 silly mapToRegistry name express-session
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry http://registry.npm.taobao.org/
+33 silly mapToRegistry data Result {
+33 silly mapToRegistry   raw: 'express-session',
+33 silly mapToRegistry   scope: null,
+33 silly mapToRegistry   name: 'express-session',
+33 silly mapToRegistry   rawSpec: '',
+33 silly mapToRegistry   spec: 'latest',
+33 silly mapToRegistry   type: 'tag' }
+34 silly mapToRegistry uri http://registry.npm.taobao.org/express-session
+35 verbose addNameTag registry:http://registry.npm.taobao.org/express-session not in flight; fetching
+36 verbose request uri http://registry.npm.taobao.org/express-session
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 17:54:05
+39 verbose request id 01fb31562359f084
+40 http request GET http://registry.npm.taobao.org/express-session
+41 http 200 http://registry.npm.taobao.org/express-session
+42 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+42 verbose headers   date: 'Fri, 12 Aug 2016 09:57:41 GMT',
+42 verbose headers   'content-type': 'application/json; charset=utf-8',
+42 verbose headers   'transfer-encoding': 'chunked',
+42 verbose headers   connection: 'keep-alive',
+42 verbose headers   'x-current-requests': '1',
+42 verbose headers   'x-readtime': '71',
+42 verbose headers   'content-encoding': 'gzip' }
+43 silly get cb [ 200,
+43 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+43 silly get     date: 'Fri, 12 Aug 2016 09:57:41 GMT',
+43 silly get     'content-type': 'application/json; charset=utf-8',
+43 silly get     'transfer-encoding': 'chunked',
+43 silly get     connection: 'keep-alive',
+43 silly get     'x-current-requests': '1',
+43 silly get     'x-readtime': '71',
+43 silly get     'content-encoding': 'gzip' } ]
+44 verbose get saving express-session to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\express-session\.cache.json
+45 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+46 silly addNameTag next cb for express-session with tag latest
+47 silly addNamed express-session@1.14.0
+48 verbose addNamed "1.14.0" is a plain semver version for express-session
+49 silly mapToRegistry name express-session
+50 silly mapToRegistry using default registry
+51 silly mapToRegistry registry http://registry.npm.taobao.org/
+52 silly mapToRegistry data Result {
+52 silly mapToRegistry   raw: 'express-session',
+52 silly mapToRegistry   scope: null,
+52 silly mapToRegistry   name: 'express-session',
+52 silly mapToRegistry   rawSpec: '',
+52 silly mapToRegistry   spec: 'latest',
+52 silly mapToRegistry   type: 'tag' }
+53 silly mapToRegistry uri http://registry.npm.taobao.org/express-session
+54 verbose addRemoteTarball http://registry.npm.taobao.org/express-session/download/express-session-1.14.0.tgz not in flight; adding
+55 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/express-session/download/express-session-1.14.0.tgz',
+55 verbose addRemoteTarball   'f5eeed3f38bfa0c6af27a0aeb8c9ec67dc07e39e' ]
+56 info retry fetch attempt 1 at 17:54:05
+57 info attempt registry request try #1 at 17:54:05
+58 http fetch GET http://registry.npm.taobao.org/express-session/download/express-session-1.14.0.tgz
+59 http fetch 200 http://registry.npm.taobao.org/express-session/download/express-session-1.14.0.tgz
+60 silly fetchAndShaCheck shasum f5eeed3f38bfa0c6af27a0aeb8c9ec67dc07e39e
+61 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\express-session\download\express-session-1.14.0.tgz not in flight; adding
+62 verbose addTmpTarball already have metadata; skipping unpack for express-session@1.14.0
+63 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+64 silly cache afterAdd express-session@1.14.0
+65 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\express-session\1.14.0\package\package.json not in flight; writing
+66 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+67 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\express-session\1.14.0\package\package.json written
+68 silly install resolved [ { name: 'express-session',
+68 silly install resolved     version: '1.14.0',
+68 silly install resolved     description: 'Simple session middleware for Express',
+68 silly install resolved     author:
+68 silly install resolved      { name: 'TJ Holowaychuk',
+68 silly install resolved        email: 'tj@vision-media.ca',
+68 silly install resolved        url: 'http://tjholowaychuk.com' },
+68 silly install resolved     contributors: [ [Object], [Object] ],
+68 silly install resolved     repository: { type: 'git', url: 'https://github.com/expressjs/session' },
+68 silly install resolved     license: 'MIT',
+68 silly install resolved     dependencies:
+68 silly install resolved      { cookie: '0.3.1',
+68 silly install resolved        'cookie-signature': '1.0.6',
+68 silly install resolved        crc: '3.4.0',
+68 silly install resolved        debug: '~2.2.0',
+68 silly install resolved        depd: '~1.1.0',
+68 silly install resolved        'on-headers': '~1.0.1',
+68 silly install resolved        parseurl: '~1.3.1',
+68 silly install resolved        'uid-safe': '~2.1.1',
+68 silly install resolved        'utils-merge': '1.0.0' },
+68 silly install resolved     devDependencies:
+68 silly install resolved      { after: '0.8.1',
+68 silly install resolved        'cookie-parser': '1.4.3',
+68 silly install resolved        express: '4.14.0',
+68 silly install resolved        istanbul: '0.4.4',
+68 silly install resolved        mocha: '2.5.3',
+68 silly install resolved        supertest: '1.1.0' },
+68 silly install resolved     files: [ 'session/', 'HISTORY.md', 'LICENSE', 'index.js' ],
+68 silly install resolved     engines: { node: '>= 0.8.0' },
+68 silly install resolved     scripts:
+68 silly install resolved      { test: 'mocha --bail --reporter spec test/',
+68 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/',
+68 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec test/' },
+68 silly install resolved     gitHead: '9fd23195578eac5962d52f46781a75a297fbe685',
+68 silly install resolved     bugs: { url: 'https://github.com/expressjs/session/issues' },
+68 silly install resolved     homepage: 'https://github.com/expressjs/session',
+68 silly install resolved     _id: 'express-session@1.14.0',
+68 silly install resolved     _shasum: 'f5eeed3f38bfa0c6af27a0aeb8c9ec67dc07e39e',
+68 silly install resolved     _from: 'express-session@latest',
+68 silly install resolved     _npmVersion: '1.4.28',
+68 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+68 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+68 silly install resolved     dist:
+68 silly install resolved      { shasum: 'f5eeed3f38bfa0c6af27a0aeb8c9ec67dc07e39e',
+68 silly install resolved        size: 17238,
+68 silly install resolved        noattachment: false,
+68 silly install resolved        tarball: 'http://registry.npm.taobao.org/express-session/download/express-session-1.14.0.tgz' },
+68 silly install resolved     _npmOperationalInternal:
+68 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+68 silly install resolved        tmp: 'tmp/express-session-1.14.0.tgz_1467429048169_0.3337707840837538' },
+68 silly install resolved     directories: {},
+68 silly install resolved     publish_time: 1467429050795,
+68 silly install resolved     _cnpm_publish_time: 1467429050795,
+68 silly install resolved     _resolved: 'http://registry.npm.taobao.org/express-session/download/express-session-1.14.0.tgz' } ]
+69 info install express-session@1.14.0 into G:\myServer\wamp\www\meadowlark
+70 info installOne express-session@1.14.0
+71 verbose installOne of express-session to G:\myServer\wamp\www\meadowlark not in flight; installing
+72 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+73 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\express-session-0b40a810d4b407fe.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session
+74 silly install write writing express-session 1.14.0 to G:\myServer\wamp\www\meadowlark\node_modules\express-session
+75 verbose unbuild node_modules\express-session
+76 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session is being purged from base G:\myServer\wamp\www\meadowlark
+77 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session
+78 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\express-session\1.14.0\package.tgz
+79 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session
+80 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session is being purged
+81 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session
+82 silly gunzTarPerm modes [ '777', '666' ]
+83 silly gunzTarPerm extractEntry package.json
+84 silly gunzTarPerm extractEntry README.md
+85 silly gunzTarPerm extractEntry LICENSE
+86 silly gunzTarPerm extractEntry index.js
+87 silly gunzTarPerm extractEntry HISTORY.md
+88 silly gunzTarPerm extractEntry session/cookie.js
+89 silly gunzTarPerm extractEntry session/memory.js
+90 silly gunzTarPerm extractEntry session/session.js
+91 silly gunzTarPerm extractEntry session/store.js
+92 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\package.json
+93 info preinstall express-session@1.14.0
+94 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\package.json
+95 silly prepareForInstallMany adding cookie@0.3.1 from express-session dependencies
+96 silly prepareForInstallMany adding cookie-signature@1.0.6 from express-session dependencies
+97 silly prepareForInstallMany adding crc@3.4.0 from express-session dependencies
+98 silly prepareForInstallMany adding debug@~2.2.0 from express-session dependencies
+99 silly prepareForInstallMany adding depd@~1.1.0 from express-session dependencies
+100 silly prepareForInstallMany adding on-headers@~1.0.1 from express-session dependencies
+101 silly prepareForInstallMany adding parseurl@~1.3.1 from express-session dependencies
+102 silly prepareForInstallMany adding uid-safe@~2.1.1 from express-session dependencies
+103 silly prepareForInstallMany adding utils-merge@1.0.0 from express-session dependencies
+104 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\package.json
+105 silly cache add args [ 'crc@3.4.0', null ]
+106 verbose cache add spec crc@3.4.0
+107 silly cache add parsed spec Result {
+107 silly cache add   raw: 'crc@3.4.0',
+107 silly cache add   scope: null,
+107 silly cache add   name: 'crc',
+107 silly cache add   rawSpec: '3.4.0',
+107 silly cache add   spec: '3.4.0',
+107 silly cache add   type: 'version' }
+108 silly addNamed crc@3.4.0
+109 verbose addNamed "3.4.0" is a plain semver version for crc
+110 silly mapToRegistry name crc
+111 silly mapToRegistry using default registry
+112 silly mapToRegistry registry http://registry.npm.taobao.org/
+113 silly mapToRegistry data Result {
+113 silly mapToRegistry   raw: 'crc',
+113 silly mapToRegistry   scope: null,
+113 silly mapToRegistry   name: 'crc',
+113 silly mapToRegistry   rawSpec: '',
+113 silly mapToRegistry   spec: 'latest',
+113 silly mapToRegistry   type: 'tag' }
+114 silly mapToRegistry uri http://registry.npm.taobao.org/crc
+115 verbose addNameVersion registry:http://registry.npm.taobao.org/crc not in flight; fetching
+116 silly cache add args [ 'debug@~2.2.0', null ]
+117 verbose cache add spec debug@~2.2.0
+118 silly cache add parsed spec Result {
+118 silly cache add   raw: 'debug@~2.2.0',
+118 silly cache add   scope: null,
+118 silly cache add   name: 'debug',
+118 silly cache add   rawSpec: '~2.2.0',
+118 silly cache add   spec: '>=2.2.0 <2.3.0',
+118 silly cache add   type: 'range' }
+119 silly addNamed debug@>=2.2.0 <2.3.0
+120 verbose addNamed ">=2.2.0 <2.3.0" is a valid semver range for debug
+121 silly addNameRange { name: 'debug', range: '>=2.2.0 <2.3.0', hasData: false }
+122 silly mapToRegistry name debug
+123 silly mapToRegistry using default registry
+124 silly mapToRegistry registry http://registry.npm.taobao.org/
+125 silly mapToRegistry data Result {
+125 silly mapToRegistry   raw: 'debug',
+125 silly mapToRegistry   scope: null,
+125 silly mapToRegistry   name: 'debug',
+125 silly mapToRegistry   rawSpec: '',
+125 silly mapToRegistry   spec: 'latest',
+125 silly mapToRegistry   type: 'tag' }
+126 silly mapToRegistry uri http://registry.npm.taobao.org/debug
+127 verbose addNameRange registry:http://registry.npm.taobao.org/debug not in flight; fetching
+128 silly cache add args [ 'depd@~1.1.0', null ]
+129 verbose cache add spec depd@~1.1.0
+130 silly cache add parsed spec Result {
+130 silly cache add   raw: 'depd@~1.1.0',
+130 silly cache add   scope: null,
+130 silly cache add   name: 'depd',
+130 silly cache add   rawSpec: '~1.1.0',
+130 silly cache add   spec: '>=1.1.0 <1.2.0',
+130 silly cache add   type: 'range' }
+131 silly addNamed depd@>=1.1.0 <1.2.0
+132 verbose addNamed ">=1.1.0 <1.2.0" is a valid semver range for depd
+133 silly addNameRange { name: 'depd', range: '>=1.1.0 <1.2.0', hasData: false }
+134 silly mapToRegistry name depd
+135 silly mapToRegistry using default registry
+136 silly mapToRegistry registry http://registry.npm.taobao.org/
+137 silly mapToRegistry data Result {
+137 silly mapToRegistry   raw: 'depd',
+137 silly mapToRegistry   scope: null,
+137 silly mapToRegistry   name: 'depd',
+137 silly mapToRegistry   rawSpec: '',
+137 silly mapToRegistry   spec: 'latest',
+137 silly mapToRegistry   type: 'tag' }
+138 silly mapToRegistry uri http://registry.npm.taobao.org/depd
+139 verbose addNameRange registry:http://registry.npm.taobao.org/depd not in flight; fetching
+140 silly cache add args [ 'on-headers@~1.0.1', null ]
+141 verbose cache add spec on-headers@~1.0.1
+142 silly cache add parsed spec Result {
+142 silly cache add   raw: 'on-headers@~1.0.1',
+142 silly cache add   scope: null,
+142 silly cache add   name: 'on-headers',
+142 silly cache add   rawSpec: '~1.0.1',
+142 silly cache add   spec: '>=1.0.1 <1.1.0',
+142 silly cache add   type: 'range' }
+143 silly addNamed on-headers@>=1.0.1 <1.1.0
+144 verbose addNamed ">=1.0.1 <1.1.0" is a valid semver range for on-headers
+145 silly addNameRange { name: 'on-headers', range: '>=1.0.1 <1.1.0', hasData: false }
+146 silly mapToRegistry name on-headers
+147 silly mapToRegistry using default registry
+148 silly mapToRegistry registry http://registry.npm.taobao.org/
+149 silly mapToRegistry data Result {
+149 silly mapToRegistry   raw: 'on-headers',
+149 silly mapToRegistry   scope: null,
+149 silly mapToRegistry   name: 'on-headers',
+149 silly mapToRegistry   rawSpec: '',
+149 silly mapToRegistry   spec: 'latest',
+149 silly mapToRegistry   type: 'tag' }
+150 silly mapToRegistry uri http://registry.npm.taobao.org/on-headers
+151 verbose addNameRange registry:http://registry.npm.taobao.org/on-headers not in flight; fetching
+152 silly cache add args [ 'parseurl@~1.3.1', null ]
+153 verbose cache add spec parseurl@~1.3.1
+154 silly cache add parsed spec Result {
+154 silly cache add   raw: 'parseurl@~1.3.1',
+154 silly cache add   scope: null,
+154 silly cache add   name: 'parseurl',
+154 silly cache add   rawSpec: '~1.3.1',
+154 silly cache add   spec: '>=1.3.1 <1.4.0',
+154 silly cache add   type: 'range' }
+155 silly addNamed parseurl@>=1.3.1 <1.4.0
+156 verbose addNamed ">=1.3.1 <1.4.0" is a valid semver range for parseurl
+157 silly addNameRange { name: 'parseurl', range: '>=1.3.1 <1.4.0', hasData: false }
+158 silly mapToRegistry name parseurl
+159 silly mapToRegistry using default registry
+160 silly mapToRegistry registry http://registry.npm.taobao.org/
+161 silly mapToRegistry data Result {
+161 silly mapToRegistry   raw: 'parseurl',
+161 silly mapToRegistry   scope: null,
+161 silly mapToRegistry   name: 'parseurl',
+161 silly mapToRegistry   rawSpec: '',
+161 silly mapToRegistry   spec: 'latest',
+161 silly mapToRegistry   type: 'tag' }
+162 silly mapToRegistry uri http://registry.npm.taobao.org/parseurl
+163 verbose addNameRange registry:http://registry.npm.taobao.org/parseurl not in flight; fetching
+164 silly cache add args [ 'uid-safe@~2.1.1', null ]
+165 verbose cache add spec uid-safe@~2.1.1
+166 silly cache add parsed spec Result {
+166 silly cache add   raw: 'uid-safe@~2.1.1',
+166 silly cache add   scope: null,
+166 silly cache add   name: 'uid-safe',
+166 silly cache add   rawSpec: '~2.1.1',
+166 silly cache add   spec: '>=2.1.1 <2.2.0',
+166 silly cache add   type: 'range' }
+167 silly addNamed uid-safe@>=2.1.1 <2.2.0
+168 verbose addNamed ">=2.1.1 <2.2.0" is a valid semver range for uid-safe
+169 silly addNameRange { name: 'uid-safe', range: '>=2.1.1 <2.2.0', hasData: false }
+170 silly mapToRegistry name uid-safe
+171 silly mapToRegistry using default registry
+172 silly mapToRegistry registry http://registry.npm.taobao.org/
+173 silly mapToRegistry data Result {
+173 silly mapToRegistry   raw: 'uid-safe',
+173 silly mapToRegistry   scope: null,
+173 silly mapToRegistry   name: 'uid-safe',
+173 silly mapToRegistry   rawSpec: '',
+173 silly mapToRegistry   spec: 'latest',
+173 silly mapToRegistry   type: 'tag' }
+174 silly mapToRegistry uri http://registry.npm.taobao.org/uid-safe
+175 verbose addNameRange registry:http://registry.npm.taobao.org/uid-safe not in flight; fetching
+176 silly cache add args [ 'utils-merge@1.0.0', null ]
+177 verbose cache add spec utils-merge@1.0.0
+178 silly cache add parsed spec Result {
+178 silly cache add   raw: 'utils-merge@1.0.0',
+178 silly cache add   scope: null,
+178 silly cache add   name: 'utils-merge',
+178 silly cache add   rawSpec: '1.0.0',
+178 silly cache add   spec: '1.0.0',
+178 silly cache add   type: 'version' }
+179 silly addNamed utils-merge@1.0.0
+180 verbose addNamed "1.0.0" is a plain semver version for utils-merge
+181 silly mapToRegistry name utils-merge
+182 silly mapToRegistry using default registry
+183 silly mapToRegistry registry http://registry.npm.taobao.org/
+184 silly mapToRegistry data Result {
+184 silly mapToRegistry   raw: 'utils-merge',
+184 silly mapToRegistry   scope: null,
+184 silly mapToRegistry   name: 'utils-merge',
+184 silly mapToRegistry   rawSpec: '',
+184 silly mapToRegistry   spec: 'latest',
+184 silly mapToRegistry   type: 'tag' }
+185 silly mapToRegistry uri http://registry.npm.taobao.org/utils-merge
+186 verbose addNameVersion registry:http://registry.npm.taobao.org/utils-merge not in flight; fetching
+187 silly cache add args [ 'cookie@0.3.1', null ]
+188 verbose cache add spec cookie@0.3.1
+189 silly cache add parsed spec Result {
+189 silly cache add   raw: 'cookie@0.3.1',
+189 silly cache add   scope: null,
+189 silly cache add   name: 'cookie',
+189 silly cache add   rawSpec: '0.3.1',
+189 silly cache add   spec: '0.3.1',
+189 silly cache add   type: 'version' }
+190 silly addNamed cookie@0.3.1
+191 verbose addNamed "0.3.1" is a plain semver version for cookie
+192 silly mapToRegistry name cookie
+193 silly mapToRegistry using default registry
+194 silly mapToRegistry registry http://registry.npm.taobao.org/
+195 silly mapToRegistry data Result {
+195 silly mapToRegistry   raw: 'cookie',
+195 silly mapToRegistry   scope: null,
+195 silly mapToRegistry   name: 'cookie',
+195 silly mapToRegistry   rawSpec: '',
+195 silly mapToRegistry   spec: 'latest',
+195 silly mapToRegistry   type: 'tag' }
+196 silly mapToRegistry uri http://registry.npm.taobao.org/cookie
+197 verbose addNameVersion registry:http://registry.npm.taobao.org/cookie not in flight; fetching
+198 silly cache add args [ 'cookie-signature@1.0.6', null ]
+199 verbose cache add spec cookie-signature@1.0.6
+200 silly cache add parsed spec Result {
+200 silly cache add   raw: 'cookie-signature@1.0.6',
+200 silly cache add   scope: null,
+200 silly cache add   name: 'cookie-signature',
+200 silly cache add   rawSpec: '1.0.6',
+200 silly cache add   spec: '1.0.6',
+200 silly cache add   type: 'version' }
+201 silly addNamed cookie-signature@1.0.6
+202 verbose addNamed "1.0.6" is a plain semver version for cookie-signature
+203 silly mapToRegistry name cookie-signature
+204 silly mapToRegistry using default registry
+205 silly mapToRegistry registry http://registry.npm.taobao.org/
+206 silly mapToRegistry data Result {
+206 silly mapToRegistry   raw: 'cookie-signature',
+206 silly mapToRegistry   scope: null,
+206 silly mapToRegistry   name: 'cookie-signature',
+206 silly mapToRegistry   rawSpec: '',
+206 silly mapToRegistry   spec: 'latest',
+206 silly mapToRegistry   type: 'tag' }
+207 silly mapToRegistry uri http://registry.npm.taobao.org/cookie-signature
+208 verbose addNameVersion registry:http://registry.npm.taobao.org/cookie-signature not in flight; fetching
+209 verbose request uri http://registry.npm.taobao.org/crc
+210 verbose request no auth needed
+211 info attempt registry request try #1 at 17:54:07
+212 http request GET http://registry.npm.taobao.org/crc
+213 verbose request uri http://registry.npm.taobao.org/uid-safe
+214 verbose request no auth needed
+215 info attempt registry request try #1 at 17:54:07
+216 http request GET http://registry.npm.taobao.org/uid-safe
+217 verbose request uri http://registry.npm.taobao.org/depd
+218 verbose request no auth needed
+219 info attempt registry request try #1 at 17:54:07
+220 http request GET http://registry.npm.taobao.org/depd
+221 verbose request uri http://registry.npm.taobao.org/debug
+222 verbose request no auth needed
+223 info attempt registry request try #1 at 17:54:07
+224 http request GET http://registry.npm.taobao.org/debug
+225 verbose request uri http://registry.npm.taobao.org/cookie
+226 verbose request no auth needed
+227 info attempt registry request try #1 at 17:54:07
+228 http request GET http://registry.npm.taobao.org/cookie
+229 verbose request uri http://registry.npm.taobao.org/cookie-signature
+230 verbose request no auth needed
+231 info attempt registry request try #1 at 17:54:07
+232 http request GET http://registry.npm.taobao.org/cookie-signature
+233 verbose request uri http://registry.npm.taobao.org/utils-merge
+234 verbose request no auth needed
+235 info attempt registry request try #1 at 17:54:07
+236 http request GET http://registry.npm.taobao.org/utils-merge
+237 verbose request uri http://registry.npm.taobao.org/on-headers
+238 verbose request no auth needed
+239 info attempt registry request try #1 at 17:54:07
+240 verbose etag "1b65-ODAvdrmVIl39Rv132SZ85g"
+241 http request GET http://registry.npm.taobao.org/on-headers
+242 verbose request uri http://registry.npm.taobao.org/parseurl
+243 verbose request no auth needed
+244 info attempt registry request try #1 at 17:54:07
+245 http request GET http://registry.npm.taobao.org/parseurl
+246 http 200 http://registry.npm.taobao.org/crc
+247 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+247 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+247 verbose headers   'content-type': 'application/json; charset=utf-8',
+247 verbose headers   'transfer-encoding': 'chunked',
+247 verbose headers   connection: 'keep-alive',
+247 verbose headers   'x-current-requests': '1',
+247 verbose headers   'x-readtime': '110',
+247 verbose headers   'content-encoding': 'gzip' }
+248 silly get cb [ 200,
+248 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+248 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+248 silly get     'content-type': 'application/json; charset=utf-8',
+248 silly get     'transfer-encoding': 'chunked',
+248 silly get     connection: 'keep-alive',
+248 silly get     'x-current-requests': '1',
+248 silly get     'x-readtime': '110',
+248 silly get     'content-encoding': 'gzip' } ]
+249 verbose get saving crc to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\crc\.cache.json
+250 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+251 silly mapToRegistry name crc
+252 silly mapToRegistry using default registry
+253 silly mapToRegistry registry http://registry.npm.taobao.org/
+254 silly mapToRegistry data Result {
+254 silly mapToRegistry   raw: 'crc',
+254 silly mapToRegistry   scope: null,
+254 silly mapToRegistry   name: 'crc',
+254 silly mapToRegistry   rawSpec: '',
+254 silly mapToRegistry   spec: 'latest',
+254 silly mapToRegistry   type: 'tag' }
+255 silly mapToRegistry uri http://registry.npm.taobao.org/crc
+256 verbose addRemoteTarball http://registry.npm.taobao.org/crc/download/crc-3.4.0.tgz not in flight; adding
+257 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/crc/download/crc-3.4.0.tgz',
+257 verbose addRemoteTarball   '4258e351613a74ef1153dfcb05e820c3e9715d7f' ]
+258 info retry fetch attempt 1 at 17:54:08
+259 info attempt registry request try #1 at 17:54:08
+260 http fetch GET http://registry.npm.taobao.org/crc/download/crc-3.4.0.tgz
+261 http 200 http://registry.npm.taobao.org/cookie-signature
+262 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+262 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+262 verbose headers   'content-type': 'application/json; charset=utf-8',
+262 verbose headers   'transfer-encoding': 'chunked',
+262 verbose headers   connection: 'keep-alive',
+262 verbose headers   'x-current-requests': '1',
+262 verbose headers   'x-readtime': '16',
+262 verbose headers   'content-encoding': 'gzip' }
+263 silly get cb [ 200,
+263 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+263 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+263 silly get     'content-type': 'application/json; charset=utf-8',
+263 silly get     'transfer-encoding': 'chunked',
+263 silly get     connection: 'keep-alive',
+263 silly get     'x-current-requests': '1',
+263 silly get     'x-readtime': '16',
+263 silly get     'content-encoding': 'gzip' } ]
+264 verbose get saving cookie-signature to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\cookie-signature\.cache.json
+265 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+266 http 200 http://registry.npm.taobao.org/uid-safe
+267 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+267 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+267 verbose headers   'content-type': 'application/json; charset=utf-8',
+267 verbose headers   'transfer-encoding': 'chunked',
+267 verbose headers   connection: 'keep-alive',
+267 verbose headers   'x-current-requests': '1',
+267 verbose headers   'x-readtime': '24',
+267 verbose headers   'content-encoding': 'gzip' }
+268 silly get cb [ 200,
+268 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+268 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+268 silly get     'content-type': 'application/json; charset=utf-8',
+268 silly get     'transfer-encoding': 'chunked',
+268 silly get     connection: 'keep-alive',
+268 silly get     'x-current-requests': '1',
+268 silly get     'x-readtime': '24',
+268 silly get     'content-encoding': 'gzip' } ]
+269 verbose get saving uid-safe to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\uid-safe\.cache.json
+270 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+271 http 200 http://registry.npm.taobao.org/depd
+272 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+272 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+272 verbose headers   'content-type': 'application/json; charset=utf-8',
+272 verbose headers   'transfer-encoding': 'chunked',
+272 verbose headers   connection: 'keep-alive',
+272 verbose headers   'x-current-requests': '1',
+272 verbose headers   'x-readtime': '25',
+272 verbose headers   'content-encoding': 'gzip' }
+273 silly get cb [ 200,
+273 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+273 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+273 silly get     'content-type': 'application/json; charset=utf-8',
+273 silly get     'transfer-encoding': 'chunked',
+273 silly get     connection: 'keep-alive',
+273 silly get     'x-current-requests': '1',
+273 silly get     'x-readtime': '25',
+273 silly get     'content-encoding': 'gzip' } ]
+274 verbose get saving depd to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\depd\.cache.json
+275 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+276 http 200 http://registry.npm.taobao.org/utils-merge
+277 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+277 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+277 verbose headers   'content-type': 'application/json; charset=utf-8',
+277 verbose headers   'transfer-encoding': 'chunked',
+277 verbose headers   connection: 'keep-alive',
+277 verbose headers   'x-current-requests': '1',
+277 verbose headers   'x-readtime': '21',
+277 verbose headers   'content-encoding': 'gzip' }
+278 silly get cb [ 200,
+278 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+278 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+278 silly get     'content-type': 'application/json; charset=utf-8',
+278 silly get     'transfer-encoding': 'chunked',
+278 silly get     connection: 'keep-alive',
+278 silly get     'x-current-requests': '1',
+278 silly get     'x-readtime': '21',
+278 silly get     'content-encoding': 'gzip' } ]
+279 verbose get saving utils-merge to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\utils-merge\.cache.json
+280 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+281 http 200 http://registry.npm.taobao.org/parseurl
+282 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+282 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+282 verbose headers   'content-type': 'application/json; charset=utf-8',
+282 verbose headers   'transfer-encoding': 'chunked',
+282 verbose headers   connection: 'keep-alive',
+282 verbose headers   'x-current-requests': '1',
+282 verbose headers   'x-readtime': '22',
+282 verbose headers   'content-encoding': 'gzip' }
+283 silly get cb [ 200,
+283 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+283 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+283 silly get     'content-type': 'application/json; charset=utf-8',
+283 silly get     'transfer-encoding': 'chunked',
+283 silly get     connection: 'keep-alive',
+283 silly get     'x-current-requests': '1',
+283 silly get     'x-readtime': '22',
+283 silly get     'content-encoding': 'gzip' } ]
+284 verbose get saving parseurl to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\parseurl\.cache.json
+285 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+286 http 200 http://registry.npm.taobao.org/cookie
+287 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+287 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+287 verbose headers   'content-type': 'application/json; charset=utf-8',
+287 verbose headers   'transfer-encoding': 'chunked',
+287 verbose headers   connection: 'keep-alive',
+287 verbose headers   'x-current-requests': '1',
+287 verbose headers   'x-readtime': '29',
+287 verbose headers   'content-encoding': 'gzip' }
+288 silly get cb [ 200,
+288 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+288 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+288 silly get     'content-type': 'application/json; charset=utf-8',
+288 silly get     'transfer-encoding': 'chunked',
+288 silly get     connection: 'keep-alive',
+288 silly get     'x-current-requests': '1',
+288 silly get     'x-readtime': '29',
+288 silly get     'content-encoding': 'gzip' } ]
+289 verbose get saving cookie to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\cookie\.cache.json
+290 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+291 silly mapToRegistry name cookie-signature
+292 silly mapToRegistry using default registry
+293 silly mapToRegistry registry http://registry.npm.taobao.org/
+294 silly mapToRegistry data Result {
+294 silly mapToRegistry   raw: 'cookie-signature',
+294 silly mapToRegistry   scope: null,
+294 silly mapToRegistry   name: 'cookie-signature',
+294 silly mapToRegistry   rawSpec: '',
+294 silly mapToRegistry   spec: 'latest',
+294 silly mapToRegistry   type: 'tag' }
+295 silly mapToRegistry uri http://registry.npm.taobao.org/cookie-signature
+296 verbose addRemoteTarball http://registry.npm.taobao.org/cookie-signature/download/cookie-signature-1.0.6.tgz not in flight; adding
+297 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/cookie-signature/download/cookie-signature-1.0.6.tgz',
+297 verbose addRemoteTarball   'e303a882b342cc3ee8ca513a79999734dab3ae2c' ]
+298 info retry fetch attempt 1 at 17:54:08
+299 info attempt registry request try #1 at 17:54:08
+300 http fetch GET http://registry.npm.taobao.org/cookie-signature/download/cookie-signature-1.0.6.tgz
+301 silly addNameRange number 2 { name: 'uid-safe', range: '>=2.1.1 <2.2.0', hasData: true }
+302 silly addNameRange versions [ 'uid-safe',
+302 silly addNameRange   [ '2.1.1',
+302 silly addNameRange     '2.1.0',
+302 silly addNameRange     '2.0.0',
+302 silly addNameRange     '1.1.0',
+302 silly addNameRange     '1.0.3',
+302 silly addNameRange     '1.0.2',
+302 silly addNameRange     '1.0.1',
+302 silly addNameRange     '1.0.0' ] ]
+303 silly addNamed uid-safe@2.1.1
+304 verbose addNamed "2.1.1" is a plain semver version for uid-safe
+305 silly mapToRegistry name uid-safe
+306 silly mapToRegistry using default registry
+307 silly mapToRegistry registry http://registry.npm.taobao.org/
+308 silly mapToRegistry data Result {
+308 silly mapToRegistry   raw: 'uid-safe',
+308 silly mapToRegistry   scope: null,
+308 silly mapToRegistry   name: 'uid-safe',
+308 silly mapToRegistry   rawSpec: '',
+308 silly mapToRegistry   spec: 'latest',
+308 silly mapToRegistry   type: 'tag' }
+309 silly mapToRegistry uri http://registry.npm.taobao.org/uid-safe
+310 verbose addRemoteTarball http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.1.tgz not in flight; adding
+311 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.1.tgz',
+311 verbose addRemoteTarball   '3dbf9436b528be9f52882c05a6216c3763db3666' ]
+312 silly addNameRange number 2 { name: 'depd', range: '>=1.1.0 <1.2.0', hasData: true }
+313 silly addNameRange versions [ 'depd',
+313 silly addNameRange   [ '1.1.0',
+313 silly addNameRange     '1.0.1',
+313 silly addNameRange     '1.0.0',
+313 silly addNameRange     '0.4.5',
+313 silly addNameRange     '0.4.4',
+313 silly addNameRange     '0.4.3',
+313 silly addNameRange     '0.4.2',
+313 silly addNameRange     '0.4.1',
+313 silly addNameRange     '0.4.0',
+313 silly addNameRange     '0.3.0',
+313 silly addNameRange     '0.2.0',
+313 silly addNameRange     '0.1.0',
+313 silly addNameRange     '0.0.1',
+313 silly addNameRange     '0.0.0' ] ]
+314 silly addNamed depd@1.1.0
+315 verbose addNamed "1.1.0" is a plain semver version for depd
+316 silly mapToRegistry name cookie
+317 silly mapToRegistry using default registry
+318 silly mapToRegistry registry http://registry.npm.taobao.org/
+319 silly mapToRegistry data Result {
+319 silly mapToRegistry   raw: 'cookie',
+319 silly mapToRegistry   scope: null,
+319 silly mapToRegistry   name: 'cookie',
+319 silly mapToRegistry   rawSpec: '',
+319 silly mapToRegistry   spec: 'latest',
+319 silly mapToRegistry   type: 'tag' }
+320 silly mapToRegistry uri http://registry.npm.taobao.org/cookie
+321 verbose addRemoteTarball http://registry.npm.taobao.org/cookie/download/cookie-0.3.1.tgz not in flight; adding
+322 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/cookie/download/cookie-0.3.1.tgz',
+322 verbose addRemoteTarball   'e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb' ]
+323 silly mapToRegistry name utils-merge
+324 silly mapToRegistry using default registry
+325 silly mapToRegistry registry http://registry.npm.taobao.org/
+326 silly mapToRegistry data Result {
+326 silly mapToRegistry   raw: 'utils-merge',
+326 silly mapToRegistry   scope: null,
+326 silly mapToRegistry   name: 'utils-merge',
+326 silly mapToRegistry   rawSpec: '',
+326 silly mapToRegistry   spec: 'latest',
+326 silly mapToRegistry   type: 'tag' }
+327 silly mapToRegistry uri http://registry.npm.taobao.org/utils-merge
+328 verbose addRemoteTarball http://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.0.tgz not in flight; adding
+329 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.0.tgz',
+329 verbose addRemoteTarball   '0294fb922bb9375153541c4f7096231f287c8af8' ]
+330 silly addNameRange number 2 { name: 'parseurl', range: '>=1.3.1 <1.4.0', hasData: true }
+331 silly addNameRange versions [ 'parseurl',
+331 silly addNameRange   [ '1.3.1',
+331 silly addNameRange     '1.3.0',
+331 silly addNameRange     '1.2.0',
+331 silly addNameRange     '1.1.3',
+331 silly addNameRange     '1.1.2',
+331 silly addNameRange     '1.1.1',
+331 silly addNameRange     '1.1.0',
+331 silly addNameRange     '1.0.1',
+331 silly addNameRange     '1.0.0' ] ]
+332 silly addNamed parseurl@1.3.1
+333 verbose addNamed "1.3.1" is a plain semver version for parseurl
+334 info retry fetch attempt 1 at 17:54:08
+335 info attempt registry request try #1 at 17:54:08
+336 http fetch GET http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.1.tgz
+337 info retry fetch attempt 1 at 17:54:08
+338 info attempt registry request try #1 at 17:54:08
+339 http fetch GET http://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.0.tgz
+340 info retry fetch attempt 1 at 17:54:08
+341 info attempt registry request try #1 at 17:54:08
+342 http fetch GET http://registry.npm.taobao.org/cookie/download/cookie-0.3.1.tgz
+343 silly cache afterAdd depd@1.1.0
+344 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\depd\1.1.0\package\package.json not in flight; writing
+345 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+346 silly cache afterAdd parseurl@1.3.1
+347 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\parseurl\1.3.1\package\package.json not in flight; writing
+348 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+349 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\depd\1.1.0\package\package.json written
+350 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\parseurl\1.3.1\package\package.json written
+351 http 200 http://registry.npm.taobao.org/on-headers
+352 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+352 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+352 verbose headers   'content-type': 'application/json; charset=utf-8',
+352 verbose headers   'transfer-encoding': 'chunked',
+352 verbose headers   connection: 'keep-alive',
+352 verbose headers   'x-current-requests': '1',
+352 verbose headers   'x-readtime': '62',
+352 verbose headers   'content-encoding': 'gzip' }
+353 silly get cb [ 200,
+353 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+353 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+353 silly get     'content-type': 'application/json; charset=utf-8',
+353 silly get     'transfer-encoding': 'chunked',
+353 silly get     connection: 'keep-alive',
+353 silly get     'x-current-requests': '1',
+353 silly get     'x-readtime': '62',
+353 silly get     'content-encoding': 'gzip' } ]
+354 verbose get saving on-headers to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\on-headers\.cache.json
+355 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+356 silly addNameRange number 2 { name: 'on-headers', range: '>=1.0.1 <1.1.0', hasData: true }
+357 silly addNameRange versions [ 'on-headers', [ '1.0.1', '1.0.0', '0.0.0' ] ]
+358 silly addNamed on-headers@1.0.1
+359 verbose addNamed "1.0.1" is a plain semver version for on-headers
+360 silly cache afterAdd on-headers@1.0.1
+361 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\on-headers\1.0.1\package\package.json not in flight; writing
+362 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+363 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\on-headers\1.0.1\package\package.json written
+364 http 200 http://registry.npm.taobao.org/debug
+365 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+365 verbose headers   date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+365 verbose headers   'content-type': 'application/json; charset=utf-8',
+365 verbose headers   'transfer-encoding': 'chunked',
+365 verbose headers   connection: 'keep-alive',
+365 verbose headers   'x-current-requests': '1',
+365 verbose headers   'x-readtime': '86',
+365 verbose headers   'content-encoding': 'gzip' }
+366 silly get cb [ 200,
+366 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+366 silly get     date: 'Fri, 12 Aug 2016 09:57:44 GMT',
+366 silly get     'content-type': 'application/json; charset=utf-8',
+366 silly get     'transfer-encoding': 'chunked',
+366 silly get     connection: 'keep-alive',
+366 silly get     'x-current-requests': '1',
+366 silly get     'x-readtime': '86',
+366 silly get     'content-encoding': 'gzip' } ]
+367 verbose get saving debug to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\debug\.cache.json
+368 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+369 silly addNameRange number 2 { name: 'debug', range: '>=2.2.0 <2.3.0', hasData: true }
+370 silly addNameRange versions [ 'debug',
+370 silly addNameRange   [ '2.2.0',
+370 silly addNameRange     '2.1.3',
+370 silly addNameRange     '2.1.2',
+370 silly addNameRange     '2.1.1',
+370 silly addNameRange     '2.1.0',
+370 silly addNameRange     '2.0.0',
+370 silly addNameRange     '1.0.4',
+370 silly addNameRange     '1.0.3',
+370 silly addNameRange     '1.0.2',
+370 silly addNameRange     '1.0.1',
+370 silly addNameRange     '1.0.0',
+370 silly addNameRange     '0.8.1',
+370 silly addNameRange     '0.8.0',
+370 silly addNameRange     '0.7.4',
+370 silly addNameRange     '0.7.3',
+370 silly addNameRange     '0.7.2',
+370 silly addNameRange     '0.7.1',
+370 silly addNameRange     '0.7.0',
+370 silly addNameRange     '0.6.0',
+370 silly addNameRange     '0.5.0',
+370 silly addNameRange     '0.4.1',
+370 silly addNameRange     '0.4.0',
+370 silly addNameRange     '0.3.0',
+370 silly addNameRange     '0.2.0',
+370 silly addNameRange     '0.1.0',
+370 silly addNameRange     '0.0.1' ] ]
+371 silly addNamed debug@2.2.0
+372 verbose addNamed "2.2.0" is a plain semver version for debug
+373 silly cache afterAdd debug@2.2.0
+374 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\debug\2.2.0\package\package.json not in flight; writing
+375 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+376 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\debug\2.2.0\package\package.json written
+377 http fetch 200 http://registry.npm.taobao.org/cookie-signature/download/cookie-signature-1.0.6.tgz
+378 silly fetchAndShaCheck shasum e303a882b342cc3ee8ca513a79999734dab3ae2c
+379 http fetch 200 http://registry.npm.taobao.org/cookie/download/cookie-0.3.1.tgz
+380 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\cookie-signature\download\cookie-signature-1.0.6.tgz not in flight; adding
+381 verbose addTmpTarball already have metadata; skipping unpack for cookie-signature@1.0.6
+382 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+383 silly cache afterAdd cookie-signature@1.0.6
+384 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\cookie-signature\1.0.6\package\package.json not in flight; writing
+385 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+386 silly fetchAndShaCheck shasum e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb
+387 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\cookie\download\cookie-0.3.1.tgz not in flight; adding
+388 verbose addTmpTarball already have metadata; skipping unpack for cookie@0.3.1
+389 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+390 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\cookie-signature\1.0.6\package\package.json written
+391 silly cache afterAdd cookie@0.3.1
+392 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\cookie\0.3.1\package\package.json not in flight; writing
+393 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+394 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\cookie\0.3.1\package\package.json written
+395 http fetch 200 http://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.0.tgz
+396 http fetch 200 http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.1.tgz
+397 silly fetchAndShaCheck shasum 0294fb922bb9375153541c4f7096231f287c8af8
+398 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\utils-merge\download\utils-merge-1.0.0.tgz not in flight; adding
+399 verbose addTmpTarball already have metadata; skipping unpack for utils-merge@1.0.0
+400 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+401 silly fetchAndShaCheck shasum 3dbf9436b528be9f52882c05a6216c3763db3666
+402 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\uid-safe\download\uid-safe-2.1.1.tgz not in flight; adding
+403 verbose addTmpTarball already have metadata; skipping unpack for uid-safe@2.1.1
+404 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+405 silly cache afterAdd utils-merge@1.0.0
+406 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\utils-merge\1.0.0\package\package.json not in flight; writing
+407 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+408 silly cache afterAdd uid-safe@2.1.1
+409 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\uid-safe\2.1.1\package\package.json not in flight; writing
+410 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+411 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\utils-merge\1.0.0\package\package.json written
+412 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\uid-safe\2.1.1\package\package.json written
+413 http fetch 200 http://registry.npm.taobao.org/crc/download/crc-3.4.0.tgz
+414 silly fetchAndShaCheck shasum 4258e351613a74ef1153dfcb05e820c3e9715d7f
+415 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\crc\download\crc-3.4.0.tgz not in flight; adding
+416 verbose addTmpTarball already have metadata; skipping unpack for crc@3.4.0
+417 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+418 silly cache afterAdd crc@3.4.0
+419 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\crc\3.4.0\package\package.json not in flight; writing
+420 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+421 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\crc\3.4.0\package\package.json written
+422 silly install resolved [ { name: 'depd',
+422 silly install resolved     description: 'Deprecate all the things',
+422 silly install resolved     version: '1.1.0',
+422 silly install resolved     author:
+422 silly install resolved      { name: 'Douglas Christopher Wilson',
+422 silly install resolved        email: 'doug@somethingdoug.com' },
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     keywords: [ 'deprecate', 'deprecated' ],
+422 silly install resolved     repository:
+422 silly install resolved      { type: 'git',
+422 silly install resolved        url: 'git+https://github.com/dougwilson/nodejs-depd.git' },
+422 silly install resolved     browser: 'lib/browser/index.js',
+422 silly install resolved     devDependencies:
+422 silly install resolved      { benchmark: '1.0.0',
+422 silly install resolved        'beautify-benchmark': '0.2.4',
+422 silly install resolved        istanbul: '0.3.5',
+422 silly install resolved        mocha: '~1.21.5' },
+422 silly install resolved     files: [ 'lib/', 'History.md', 'LICENSE', 'index.js', 'Readme.md' ],
+422 silly install resolved     engines: { node: '>= 0.6' },
+422 silly install resolved     scripts:
+422 silly install resolved      { bench: 'node benchmark/index.js',
+422 silly install resolved        test: 'mocha --reporter spec --bail test/',
+422 silly install resolved        'test-ci': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --no-exit test/',
+422 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/' },
+422 silly install resolved     gitHead: '78c659de20283e3a6bee92bda455e6daff01686a',
+422 silly install resolved     bugs: { url: 'https://github.com/dougwilson/nodejs-depd/issues' },
+422 silly install resolved     homepage: 'https://github.com/dougwilson/nodejs-depd',
+422 silly install resolved     _id: 'depd@1.1.0',
+422 silly install resolved     _shasum: 'e1bd82c6aab6ced965b97b88b17ed3e528ca18c3',
+422 silly install resolved     _from: 'depd@>=1.1.0 <1.2.0',
+422 silly install resolved     _npmVersion: '1.4.28',
+422 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+422 silly install resolved     maintainers: [ [Object] ],
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: 'e1bd82c6aab6ced965b97b88b17ed3e528ca18c3',
+422 silly install resolved        size: 9011,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/depd/download/depd-1.1.0.tgz' },
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1442246346622,
+422 silly install resolved     _cnpm_publish_time: 1442246346622,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/depd/download/depd-1.1.0.tgz',
+422 silly install resolved     readme: 'ERROR: No README data found!' },
+422 silly install resolved   { name: 'parseurl',
+422 silly install resolved     description: 'parse a url with memoization',
+422 silly install resolved     version: '1.3.1',
+422 silly install resolved     author:
+422 silly install resolved      { name: 'Jonathan Ong',
+422 silly install resolved        email: 'me@jongleberry.com',
+422 silly install resolved        url: 'http://jongleberry.com' },
+422 silly install resolved     contributors: [ [Object] ],
+422 silly install resolved     repository:
+422 silly install resolved      { type: 'git',
+422 silly install resolved        url: 'git+https://github.com/pillarjs/parseurl.git' },
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     devDependencies:
+422 silly install resolved      { benchmark: '2.0.0',
+422 silly install resolved        'beautify-benchmark': '0.2.4',
+422 silly install resolved        'fast-url-parser': '1.1.3',
+422 silly install resolved        istanbul: '0.4.2',
+422 silly install resolved        mocha: '~1.21.5' },
+422 silly install resolved     files: [ 'LICENSE', 'HISTORY.md', 'README.md', 'index.js' ],
+422 silly install resolved     engines: { node: '>= 0.8' },
+422 silly install resolved     scripts:
+422 silly install resolved      { bench: 'node benchmark/index.js',
+422 silly install resolved        test: 'mocha --check-leaks --bail --reporter spec test/',
+422 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot test/',
+422 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec test/' },
+422 silly install resolved     gitHead: '6d22d376d75b927ab2b5347ce3a1d6735133dd43',
+422 silly install resolved     bugs: { url: 'https://github.com/pillarjs/parseurl/issues' },
+422 silly install resolved     homepage: 'https://github.com/pillarjs/parseurl',
+422 silly install resolved     _id: 'parseurl@1.3.1',
+422 silly install resolved     _shasum: 'c8ab8c9223ba34888aa64a297b28853bec18da56',
+422 silly install resolved     _from: 'parseurl@>=1.3.1 <1.4.0',
+422 silly install resolved     _npmVersion: '1.4.28',
+422 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+422 silly install resolved     maintainers: [ [Object], [Object] ],
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: 'c8ab8c9223ba34888aa64a297b28853bec18da56',
+422 silly install resolved        size: 3379,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/parseurl/download/parseurl-1.3.1.tgz' },
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1453060175110,
+422 silly install resolved     _cnpm_publish_time: 1453060175110,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/parseurl/download/parseurl-1.3.1.tgz',
+422 silly install resolved     readme: 'ERROR: No README data found!' },
+422 silly install resolved   { name: 'on-headers',
+422 silly install resolved     description: 'Execute a listener when a response is about to write headers',
+422 silly install resolved     version: '1.0.1',
+422 silly install resolved     author:
+422 silly install resolved      { name: 'Douglas Christopher Wilson',
+422 silly install resolved        email: 'doug@somethingdoug.com' },
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     keywords: [ 'event', 'headers', 'http', 'onheaders' ],
+422 silly install resolved     repository:
+422 silly install resolved      { type: 'git',
+422 silly install resolved        url: 'git+https://github.com/jshttp/on-headers.git' },
+422 silly install resolved     dependencies: {},
+422 silly install resolved     devDependencies: { istanbul: '0.3.21', mocha: '2.3.3', supertest: '1.1.0' },
+422 silly install resolved     files: [ 'LICENSE', 'HISTORY.md', 'README.md', 'index.js' ],
+422 silly install resolved     engines: { node: '>= 0.8' },
+422 silly install resolved     scripts:
+422 silly install resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
+422 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/',
+422 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/' },
+422 silly install resolved     gitHead: 'ab0156a979d72353cfe666cccb3639e016b00280',
+422 silly install resolved     bugs: { url: 'https://github.com/jshttp/on-headers/issues' },
+422 silly install resolved     homepage: 'https://github.com/jshttp/on-headers',
+422 silly install resolved     _id: 'on-headers@1.0.1',
+422 silly install resolved     _shasum: '928f5d0f470d49342651ea6794b0857c100693f7',
+422 silly install resolved     _from: 'on-headers@>=1.0.1 <1.1.0',
+422 silly install resolved     _npmVersion: '1.4.28',
+422 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+422 silly install resolved     maintainers: [ [Object], [Object] ],
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: '928f5d0f470d49342651ea6794b0857c100693f7',
+422 silly install resolved        size: 2873,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/on-headers/download/on-headers-1.0.1.tgz' },
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1443584826558,
+422 silly install resolved     _cnpm_publish_time: 1443584826558,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/on-headers/download/on-headers-1.0.1.tgz',
+422 silly install resolved     readme: 'ERROR: No README data found!' },
+422 silly install resolved   { name: 'debug',
+422 silly install resolved     version: '2.2.0',
+422 silly install resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/debug.git' },
+422 silly install resolved     description: 'small debugging utility',
+422 silly install resolved     keywords: [ 'debug', 'log', 'debugger' ],
+422 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+422 silly install resolved     contributors: [ [Object] ],
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     dependencies: { ms: '0.7.1' },
+422 silly install resolved     devDependencies: { browserify: '9.0.3', mocha: '*' },
+422 silly install resolved     main: './node.js',
+422 silly install resolved     browser: './browser.js',
+422 silly install resolved     component: { scripts: [Object] },
+422 silly install resolved     gitHead: 'b38458422b5aa8aa6d286b10dfe427e8a67e2b35',
+422 silly install resolved     bugs: { url: 'https://github.com/visionmedia/debug/issues' },
+422 silly install resolved     homepage: 'https://github.com/visionmedia/debug',
+422 silly install resolved     _id: 'debug@2.2.0',
+422 silly install resolved     scripts: {},
+422 silly install resolved     _shasum: 'f87057e995b1a1f6ae6a4960664137bc56f039da',
+422 silly install resolved     _from: 'debug@>=2.2.0 <2.3.0',
+422 silly install resolved     _npmVersion: '2.7.4',
+422 silly install resolved     _nodeVersion: '0.12.2',
+422 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+422 silly install resolved     maintainers: [ [Object], [Object] ],
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: 'f87057e995b1a1f6ae6a4960664137bc56f039da',
+422 silly install resolved        size: 10293,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/debug/download/debug-2.2.0.tgz' },
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1431242485639,
+422 silly install resolved     _cnpm_publish_time: 1431242485639,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/debug/download/debug-2.2.0.tgz',
+422 silly install resolved     readme: 'ERROR: No README data found!' },
+422 silly install resolved   { name: 'cookie-signature',
+422 silly install resolved     version: '1.0.6',
+422 silly install resolved     description: 'Sign and unsign cookies',
+422 silly install resolved     keywords: [ 'cookie', 'sign', 'unsign' ],
+422 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     repository:
+422 silly install resolved      { type: 'git',
+422 silly install resolved        url: 'https://github.com/visionmedia/node-cookie-signature.git' },
+422 silly install resolved     dependencies: {},
+422 silly install resolved     devDependencies: { mocha: '*', should: '*' },
+422 silly install resolved     scripts: { test: 'mocha --require should --reporter spec' },
+422 silly install resolved     main: 'index',
+422 silly install resolved     gitHead: '391b56cf44d88c493491b7e3fc53208cfb976d2a',
+422 silly install resolved     bugs: { url: 'https://github.com/visionmedia/node-cookie-signature/issues' },
+422 silly install resolved     homepage: 'https://github.com/visionmedia/node-cookie-signature',
+422 silly install resolved     _id: 'cookie-signature@1.0.6',
+422 silly install resolved     _shasum: 'e303a882b342cc3ee8ca513a79999734dab3ae2c',
+422 silly install resolved     _from: 'cookie-signature@1.0.6',
+422 silly install resolved     _npmVersion: '2.3.0',
+422 silly install resolved     _nodeVersion: '0.10.36',
+422 silly install resolved     _npmUser: { name: 'natevw', email: 'natevw@yahoo.com' },
+422 silly install resolved     maintainers: [ [Object], [Object] ],
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: 'e303a882b342cc3ee8ca513a79999734dab3ae2c',
+422 silly install resolved        size: 2111,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/cookie-signature/download/cookie-signature-1.0.6.tgz' },
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1423002195095,
+422 silly install resolved     _cnpm_publish_time: 1423002195095,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/cookie-signature/download/cookie-signature-1.0.6.tgz' },
+422 silly install resolved   { name: 'cookie',
+422 silly install resolved     description: 'HTTP server cookie parsing and serialization',
+422 silly install resolved     version: '0.3.1',
+422 silly install resolved     author: { name: 'Roman Shtylman', email: 'shtylman@gmail.com' },
+422 silly install resolved     contributors: [ [Object] ],
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     keywords: [ 'cookie', 'cookies' ],
+422 silly install resolved     repository: { type: 'git', url: 'https://github.com/jshttp/cookie' },
+422 silly install resolved     devDependencies: { istanbul: '0.4.3', mocha: '1.21.5' },
+422 silly install resolved     files: [ 'HISTORY.md', 'LICENSE', 'README.md', 'index.js' ],
+422 silly install resolved     engines: { node: '>= 0.6' },
+422 silly install resolved     scripts:
+422 silly install resolved      { test: 'mocha --reporter spec --bail --check-leaks test/',
+422 silly install resolved        'test-ci': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/',
+422 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/' },
+422 silly install resolved     gitHead: 'e3c77d497d66c8b8d4b677b8954c1b192a09f0b3',
+422 silly install resolved     bugs: { url: 'https://github.com/jshttp/cookie/issues' },
+422 silly install resolved     homepage: 'https://github.com/jshttp/cookie',
+422 silly install resolved     _id: 'cookie@0.3.1',
+422 silly install resolved     _shasum: 'e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb',
+422 silly install resolved     _from: 'cookie@0.3.1',
+422 silly install resolved     _npmVersion: '1.4.28',
+422 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+422 silly install resolved     maintainers: [ [Object] ],
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: 'e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb',
+422 silly install resolved        size: 5970,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/cookie/download/cookie-0.3.1.tgz' },
+422 silly install resolved     _npmOperationalInternal:
+422 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+422 silly install resolved        tmp: 'tmp/cookie-0.3.1.tgz_1464323556714_0.6435900838114321' },
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1464323559156,
+422 silly install resolved     _cnpm_publish_time: 1464323559156,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/cookie/download/cookie-0.3.1.tgz' },
+422 silly install resolved   { name: 'utils-merge',
+422 silly install resolved     version: '1.0.0',
+422 silly install resolved     description: 'merge() utility function',
+422 silly install resolved     keywords: [ 'util' ],
+422 silly install resolved     repository:
+422 silly install resolved      { type: 'git',
+422 silly install resolved        url: 'git://github.com/jaredhanson/utils-merge.git' },
+422 silly install resolved     bugs: { url: 'http://github.com/jaredhanson/utils-merge/issues' },
+422 silly install resolved     author:
+422 silly install resolved      { name: 'Jared Hanson',
+422 silly install resolved        email: 'jaredhanson@gmail.com',
+422 silly install resolved        url: 'http://www.jaredhanson.net/' },
+422 silly install resolved     licenses: [ [Object] ],
+422 silly install resolved     main: './index',
+422 silly install resolved     dependencies: {},
+422 silly install resolved     devDependencies: { mocha: '1.x.x', chai: '1.x.x' },
+422 silly install resolved     scripts: { test: 'node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js' },
+422 silly install resolved     engines: { node: '>= 0.4.0' },
+422 silly install resolved     readmeFilename: 'README.md',
+422 silly install resolved     _id: 'utils-merge@1.0.0',
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: '0294fb922bb9375153541c4f7096231f287c8af8',
+422 silly install resolved        size: 1689,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.0.tgz' },
+422 silly install resolved     _from: 'utils-merge@1.0.0',
+422 silly install resolved     _npmVersion: '1.2.25',
+422 silly install resolved     _npmUser: { name: 'jaredhanson', email: 'jaredhanson@gmail.com' },
+422 silly install resolved     maintainers: [ [Object] ],
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1373569217317,
+422 silly install resolved     _cnpm_publish_time: 1373569217317,
+422 silly install resolved     _shasum: '0294fb922bb9375153541c4f7096231f287c8af8',
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.0.tgz' },
+422 silly install resolved   { name: 'uid-safe',
+422 silly install resolved     description: 'URL and cookie safe UIDs',
+422 silly install resolved     version: '2.1.1',
+422 silly install resolved     contributors: [ [Object], [Object] ],
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     repository:
+422 silly install resolved      { type: 'git',
+422 silly install resolved        url: 'git+https://github.com/crypto-utils/uid-safe.git' },
+422 silly install resolved     dependencies: { 'base64-url': '1.2.2', 'random-bytes': '~1.0.0' },
+422 silly install resolved     devDependencies: { bluebird: '3.3.5', istanbul: '0.4.3', mocha: '2.4.5' },
+422 silly install resolved     files: [ 'LICENSE', 'HISTORY.md', 'README.md', 'index.js' ],
+422 silly install resolved     engines: { node: '>= 0.8' },
+422 silly install resolved     scripts:
+422 silly install resolved      { test: 'mocha --trace-deprecation --reporter spec --bail --check-leaks test/',
+422 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --trace-deprecation --reporter dot --check-leaks test/',
+422 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --trace-deprecation --reporter spec --check-leaks test/' },
+422 silly install resolved     keywords: [ 'random', 'generator', 'uid', 'safe' ],
+422 silly install resolved     gitHead: '5cb17ae9451505ac823877e641a6f080731822ea',
+422 silly install resolved     bugs: { url: 'https://github.com/crypto-utils/uid-safe/issues' },
+422 silly install resolved     homepage: 'https://github.com/crypto-utils/uid-safe#readme',
+422 silly install resolved     _id: 'uid-safe@2.1.1',
+422 silly install resolved     _shasum: '3dbf9436b528be9f52882c05a6216c3763db3666',
+422 silly install resolved     _from: 'uid-safe@>=2.1.1 <2.2.0',
+422 silly install resolved     _npmVersion: '2.15.1',
+422 silly install resolved     _nodeVersion: '4.4.3',
+422 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: '3dbf9436b528be9f52882c05a6216c3763db3666',
+422 silly install resolved        size: 2936,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.1.tgz' },
+422 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+422 silly install resolved     _npmOperationalInternal:
+422 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+422 silly install resolved        tmp: 'tmp/uid-safe-2.1.1.tgz_1462417218771_0.08699076832272112' },
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1462417221152,
+422 silly install resolved     _cnpm_publish_time: 1462417221152,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.1.tgz' },
+422 silly install resolved   { name: 'crc',
+422 silly install resolved     version: '3.4.0',
+422 silly install resolved     description: 'Module for calculating Cyclic Redundancy Check (CRC) for Node.js and the Browser.',
+422 silly install resolved     keywords: [ 'crc' ],
+422 silly install resolved     files: [ 'lib' ],
+422 silly install resolved     main: './lib/index.js',
+422 silly install resolved     scripts:
+422 silly install resolved      { test: 'mocha test/*.test.js',
+422 silly install resolved        pretest: 'cd src && babel --out-dir ../lib *.js' },
+422 silly install resolved     author:
+422 silly install resolved      { name: 'Alex Gorbatchev',
+422 silly install resolved        url: 'https://github.com/alexgorbatchev' },
+422 silly install resolved     devDependencies:
+422 silly install resolved      { 'babel-core': '^6.1.21',
+422 silly install resolved        'babel-preset-es2015': '^6.1.18',
+422 silly install resolved        'beautify-benchmark': '^0.2.4',
+422 silly install resolved        benchmark: '^1.0.0',
+422 silly install resolved        'buffer-crc32': '^0.2.3',
+422 silly install resolved        chai: '^3.4.1',
+422 silly install resolved        mocha: '*',
+422 silly install resolved        seedrandom: '^2.3.6' },
+422 silly install resolved     homepage: 'https://github.com/alexgorbatchev/node-crc',
+422 silly install resolved     bugs: { url: 'https://github.com/alexgorbatchev/node-crc/issues' },
+422 silly install resolved     repository:
+422 silly install resolved      { type: 'git',
+422 silly install resolved        url: 'git://github.com/alexgorbatchev/node-crc.git' },
+422 silly install resolved     license: 'MIT',
+422 silly install resolved     babel: { presets: [Object] },
+422 silly install resolved     gitHead: '3726e792cb4a328ef2d935cfd896e54fa9529aaf',
+422 silly install resolved     _id: 'crc@3.4.0',
+422 silly install resolved     _shasum: '4258e351613a74ef1153dfcb05e820c3e9715d7f',
+422 silly install resolved     _from: 'crc@3.4.0',
+422 silly install resolved     _npmVersion: '2.11.3',
+422 silly install resolved     _nodeVersion: '0.12.7',
+422 silly install resolved     _npmUser: { name: 'alexgorbatchev', email: 'alex.gorbatchev@gmail.com' },
+422 silly install resolved     dist:
+422 silly install resolved      { shasum: '4258e351613a74ef1153dfcb05e820c3e9715d7f',
+422 silly install resolved        size: 10219,
+422 silly install resolved        noattachment: false,
+422 silly install resolved        tarball: 'http://registry.npm.taobao.org/crc/download/crc-3.4.0.tgz' },
+422 silly install resolved     maintainers: [ [Object] ],
+422 silly install resolved     directories: {},
+422 silly install resolved     publish_time: 1449534711565,
+422 silly install resolved     _cnpm_publish_time: 1449534711565,
+422 silly install resolved     _resolved: 'http://registry.npm.taobao.org/crc/download/crc-3.4.0.tgz' } ]
+423 info install depd@1.1.0 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+424 info install parseurl@1.3.1 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+425 info install on-headers@1.0.1 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+426 info install debug@2.2.0 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+427 info install cookie-signature@1.0.6 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+428 info install cookie@0.3.1 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+429 info install utils-merge@1.0.0 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+430 info install uid-safe@2.1.1 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+431 info install crc@3.4.0 into G:\myServer\wamp\www\meadowlark\node_modules\express-session
+432 info installOne depd@1.1.0
+433 verbose installOne of depd to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+434 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+435 info installOne parseurl@1.3.1
+436 verbose installOne of parseurl to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+437 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+438 info installOne on-headers@1.0.1
+439 verbose installOne of on-headers to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+440 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+441 info installOne debug@2.2.0
+442 verbose installOne of debug to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+443 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+444 info installOne cookie-signature@1.0.6
+445 verbose installOne of cookie-signature to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+446 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+447 info installOne cookie@0.3.1
+448 verbose installOne of cookie to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+449 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+450 info installOne utils-merge@1.0.0
+451 verbose installOne of utils-merge to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+452 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+453 info installOne uid-safe@2.1.1
+454 verbose installOne of uid-safe to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+455 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+456 info installOne crc@3.4.0
+457 verbose installOne of crc to G:\myServer\wamp\www\meadowlark\node_modules\express-session not in flight; installing
+458 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+459 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\on-headers-42ec51d7bc5bc010.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+460 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\parseurl-1d89bb3bc4c72e39.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+461 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\depd-19474b5557e930f5.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+462 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\debug-3d8c0d969d962b43.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+463 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\cookie-signature-bed7e9da9e17ec9f.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+464 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\cookie-f1162248777cdd72.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+465 silly install write writing on-headers 1.0.1 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+466 silly install write writing parseurl 1.3.1 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+467 silly install write writing depd 1.1.0 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+468 silly install write writing debug 2.2.0 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+469 silly install write writing cookie-signature 1.0.6 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+470 silly install write writing cookie 0.3.1 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+471 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\crc-06789efea05a9730.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+472 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\utils-merge-3736b08f5452e0db.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+473 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\uid-safe-5ac0f0ceb30e8b96.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+474 silly install write writing crc 3.4.0 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+475 silly install write writing utils-merge 1.0.0 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+476 silly install write writing uid-safe 2.1.1 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+477 verbose unbuild node_modules\express-session\node_modules\on-headers
+478 verbose unbuild node_modules\express-session\node_modules\parseurl
+479 verbose unbuild node_modules\express-session\node_modules\depd
+480 verbose unbuild node_modules\express-session\node_modules\cookie
+481 verbose unbuild node_modules\express-session\node_modules\cookie-signature
+482 verbose unbuild node_modules\express-session\node_modules\debug
+483 verbose unbuild node_modules\express-session\node_modules\crc
+484 verbose unbuild node_modules\express-session\node_modules\utils-merge
+485 verbose unbuild node_modules\express-session\node_modules\uid-safe
+486 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers is being purged from base G:\myServer\wamp\www\meadowlark
+487 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+488 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl is being purged from base G:\myServer\wamp\www\meadowlark
+489 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+490 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd is being purged from base G:\myServer\wamp\www\meadowlark
+491 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+492 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie is being purged from base G:\myServer\wamp\www\meadowlark
+493 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+494 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature is being purged from base G:\myServer\wamp\www\meadowlark
+495 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+496 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug is being purged from base G:\myServer\wamp\www\meadowlark
+497 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+498 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\on-headers\1.0.1\package.tgz
+499 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+500 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers is being purged
+501 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+502 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\parseurl\1.3.1\package.tgz
+503 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+504 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl is being purged
+505 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+506 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\depd\1.1.0\package.tgz
+507 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+508 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd is being purged
+509 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+510 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\cookie\0.3.1\package.tgz
+511 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+512 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie is being purged
+513 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+514 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\cookie-signature\1.0.6\package.tgz
+515 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+516 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature is being purged
+517 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+518 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\debug\2.2.0\package.tgz
+519 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+520 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug is being purged
+521 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+522 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc is being purged from base G:\myServer\wamp\www\meadowlark
+523 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+524 silly gunzTarPerm modes [ '777', '666' ]
+525 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge is being purged from base G:\myServer\wamp\www\meadowlark
+526 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+527 silly gunzTarPerm modes [ '777', '666' ]
+528 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe is being purged from base G:\myServer\wamp\www\meadowlark
+529 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+530 silly gunzTarPerm modes [ '777', '666' ]
+531 silly gunzTarPerm modes [ '777', '666' ]
+532 silly gunzTarPerm modes [ '777', '666' ]
+533 silly gunzTarPerm modes [ '777', '666' ]
+534 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\crc\3.4.0\package.tgz
+535 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+536 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc is being purged
+537 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+538 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\utils-merge\1.0.0\package.tgz
+539 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+540 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge is being purged
+541 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+542 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\uid-safe\2.1.1\package.tgz
+543 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+544 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe is being purged
+545 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+546 silly gunzTarPerm modes [ '777', '666' ]
+547 silly gunzTarPerm modes [ '777', '666' ]
+548 silly gunzTarPerm modes [ '777', '666' ]
+549 silly gunzTarPerm extractEntry package.json
+550 silly gunzTarPerm extractEntry package.json
+551 silly gunzTarPerm extractEntry package.json
+552 silly gunzTarPerm extractEntry package.json
+553 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+554 silly gunzTarPerm extractEntry package.json
+555 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+556 silly gunzTarPerm extractEntry package.json
+557 silly gunzTarPerm extractEntry package.json
+558 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+559 silly gunzTarPerm extractEntry package.json
+560 silly gunzTarPerm extractEntry package.json
+561 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+562 silly gunzTarPerm extractEntry README.md
+563 silly gunzTarPerm extractEntry LICENSE
+564 silly gunzTarPerm extractEntry LICENSE
+565 silly gunzTarPerm extractEntry index.js
+566 silly gunzTarPerm extractEntry README.md
+567 silly gunzTarPerm extractEntry LICENSE
+568 silly gunzTarPerm extractEntry .npmignore
+569 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+570 silly gunzTarPerm extractEntry index.js
+571 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+572 silly gunzTarPerm extractEntry .npmignore
+573 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+574 silly gunzTarPerm extractEntry node.js
+575 silly gunzTarPerm modified mode [ 'node.js', 420, 438 ]
+576 silly gunzTarPerm extractEntry README.md
+577 silly gunzTarPerm extractEntry LICENSE
+578 silly gunzTarPerm extractEntry README.md
+579 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+580 silly gunzTarPerm extractEntry LICENSE
+581 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+582 silly gunzTarPerm extractEntry README.md
+583 silly gunzTarPerm extractEntry LICENSE
+584 silly gunzTarPerm extractEntry README.md
+585 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+586 silly gunzTarPerm extractEntry LICENSE
+587 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+588 silly gunzTarPerm extractEntry index.js
+589 silly gunzTarPerm extractEntry HISTORY.md
+590 silly gunzTarPerm extractEntry History.md
+591 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+592 silly gunzTarPerm extractEntry Readme.md
+593 silly gunzTarPerm modified mode [ 'Readme.md', 420, 438 ]
+594 silly gunzTarPerm extractEntry History.md
+595 silly gunzTarPerm extractEntry Readme.md
+596 silly gunzTarPerm extractEntry lib/browser/index.js
+597 silly gunzTarPerm extractEntry lib/compat/buffer-concat.js
+598 silly gunzTarPerm extractEntry lib/compat/callsite-tostring.js
+599 silly gunzTarPerm extractEntry lib/compat/event-listener-count.js
+600 silly gunzTarPerm extractEntry lib/compat/index.js
+601 silly gunzTarPerm extractEntry index.js
+602 silly gunzTarPerm extractEntry HISTORY.md
+603 silly gunzTarPerm extractEntry debug.js
+604 silly gunzTarPerm modified mode [ 'debug.js', 420, 438 ]
+605 silly gunzTarPerm extractEntry browser.js
+606 silly gunzTarPerm modified mode [ 'browser.js', 420, 438 ]
+607 silly gunzTarPerm extractEntry index.js
+608 silly gunzTarPerm extractEntry HISTORY.md
+609 silly gunzTarPerm extractEntry lib/crc1.js
+610 silly gunzTarPerm modified mode [ 'lib/crc1.js', 420, 438 ]
+611 silly gunzTarPerm extractEntry lib/crc16_ccitt.js
+612 silly gunzTarPerm modified mode [ 'lib/crc16_ccitt.js', 420, 438 ]
+613 silly gunzTarPerm extractEntry index.js
+614 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+615 silly gunzTarPerm extractEntry .travis.yml
+616 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+617 silly gunzTarPerm extractEntry index.js
+618 silly gunzTarPerm extractEntry HISTORY.md
+619 silly gunzTarPerm extractEntry Readme.md
+620 silly gunzTarPerm modified mode [ 'Readme.md', 420, 438 ]
+621 silly gunzTarPerm extractEntry lib/crc16_kermit.js
+622 silly gunzTarPerm modified mode [ 'lib/crc16_kermit.js', 420, 438 ]
+623 silly gunzTarPerm extractEntry lib/crc16_modbus.js
+624 silly gunzTarPerm modified mode [ 'lib/crc16_modbus.js', 420, 438 ]
+625 silly gunzTarPerm extractEntry lib/crc16_xmodem.js
+626 silly gunzTarPerm modified mode [ 'lib/crc16_xmodem.js', 420, 438 ]
+627 silly gunzTarPerm extractEntry lib/crc16.js
+628 silly gunzTarPerm modified mode [ 'lib/crc16.js', 420, 438 ]
+629 silly gunzTarPerm extractEntry lib/crc32.js
+630 silly gunzTarPerm modified mode [ 'lib/crc32.js', 420, 438 ]
+631 silly gunzTarPerm extractEntry lib/crc8.js
+632 silly gunzTarPerm modified mode [ 'lib/crc8.js', 420, 438 ]
+633 silly gunzTarPerm extractEntry lib/crc8_1wire.js
+634 silly gunzTarPerm modified mode [ 'lib/crc8_1wire.js', 420, 438 ]
+635 silly gunzTarPerm extractEntry lib/define_crc.js
+636 silly gunzTarPerm modified mode [ 'lib/define_crc.js', 420, 438 ]
+637 silly gunzTarPerm extractEntry lib/index.js
+638 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 438 ]
+639 silly gunzTarPerm extractEntry lib/crc24.js
+640 silly gunzTarPerm modified mode [ 'lib/crc24.js', 420, 438 ]
+641 silly gunzTarPerm extractEntry bower.json
+642 silly gunzTarPerm modified mode [ 'bower.json', 420, 438 ]
+643 silly gunzTarPerm extractEntry .jshintrc
+644 silly gunzTarPerm modified mode [ '.jshintrc', 420, 438 ]
+645 silly gunzTarPerm extractEntry component.json
+646 silly gunzTarPerm modified mode [ 'component.json', 420, 438 ]
+647 silly gunzTarPerm extractEntry Makefile
+648 silly gunzTarPerm modified mode [ 'Makefile', 420, 438 ]
+649 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge\package.json
+650 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers\package.json
+651 silly gunzTarPerm extractEntry History.md
+652 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+653 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie\package.json
+654 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\package.json
+655 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl\package.json
+656 info preinstall on-headers@1.0.1
+657 info preinstall utils-merge@1.0.0
+658 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature\package.json
+659 info preinstall cookie@0.3.1
+660 info preinstall uid-safe@2.1.1
+661 info preinstall parseurl@1.3.1
+662 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers\package.json
+663 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge\package.json
+664 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie\package.json
+665 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\package.json
+666 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl\package.json
+667 info preinstall cookie-signature@1.0.6
+668 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers\package.json
+669 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature\package.json
+670 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl\package.json
+671 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge\package.json
+672 silly install resolved []
+673 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+674 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+675 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie\package.json
+676 silly prepareForInstallMany adding base64-url@1.2.2 from uid-safe dependencies
+677 silly prepareForInstallMany adding random-bytes@~1.0.0 from uid-safe dependencies
+678 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\package.json
+679 silly install resolved []
+680 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+681 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+682 info linkStuff on-headers@1.0.1
+683 silly linkStuff on-headers@1.0.1 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+684 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature\package.json
+685 info linkStuff parseurl@1.3.1
+686 silly linkStuff parseurl@1.3.1 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+687 silly install resolved []
+688 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+689 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+690 silly install resolved []
+691 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+692 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+693 silly cache add args [ 'base64-url@1.2.2', null ]
+694 verbose cache add spec base64-url@1.2.2
+695 silly cache add args [ 'random-bytes@~1.0.0', null ]
+696 verbose cache add spec random-bytes@~1.0.0
+697 silly cache add parsed spec Result {
+697 silly cache add   raw: 'base64-url@1.2.2',
+697 silly cache add   scope: null,
+697 silly cache add   name: 'base64-url',
+697 silly cache add   rawSpec: '1.2.2',
+697 silly cache add   spec: '1.2.2',
+697 silly cache add   type: 'version' }
+698 silly addNamed base64-url@1.2.2
+699 verbose addNamed "1.2.2" is a plain semver version for base64-url
+700 silly mapToRegistry name base64-url
+701 silly mapToRegistry using default registry
+702 silly mapToRegistry registry http://registry.npm.taobao.org/
+703 silly mapToRegistry data Result {
+703 silly mapToRegistry   raw: 'base64-url',
+703 silly mapToRegistry   scope: null,
+703 silly mapToRegistry   name: 'base64-url',
+703 silly mapToRegistry   rawSpec: '',
+703 silly mapToRegistry   spec: 'latest',
+703 silly mapToRegistry   type: 'tag' }
+704 silly mapToRegistry uri http://registry.npm.taobao.org/base64-url
+705 verbose addNameVersion registry:http://registry.npm.taobao.org/base64-url not in flight; fetching
+706 silly cache add parsed spec Result {
+706 silly cache add   raw: 'random-bytes@~1.0.0',
+706 silly cache add   scope: null,
+706 silly cache add   name: 'random-bytes',
+706 silly cache add   rawSpec: '~1.0.0',
+706 silly cache add   spec: '>=1.0.0 <1.1.0',
+706 silly cache add   type: 'range' }
+707 silly addNamed random-bytes@>=1.0.0 <1.1.0
+708 verbose addNamed ">=1.0.0 <1.1.0" is a valid semver range for random-bytes
+709 silly addNameRange { name: 'random-bytes', range: '>=1.0.0 <1.1.0', hasData: false }
+710 silly mapToRegistry name random-bytes
+711 silly mapToRegistry using default registry
+712 silly mapToRegistry registry http://registry.npm.taobao.org/
+713 silly mapToRegistry data Result {
+713 silly mapToRegistry   raw: 'random-bytes',
+713 silly mapToRegistry   scope: null,
+713 silly mapToRegistry   name: 'random-bytes',
+713 silly mapToRegistry   rawSpec: '',
+713 silly mapToRegistry   spec: 'latest',
+713 silly mapToRegistry   type: 'tag' }
+714 silly mapToRegistry uri http://registry.npm.taobao.org/random-bytes
+715 verbose addNameRange registry:http://registry.npm.taobao.org/random-bytes not in flight; fetching
+716 verbose request uri http://registry.npm.taobao.org/base64-url
+717 verbose request no auth needed
+718 info attempt registry request try #1 at 17:54:09
+719 http request GET http://registry.npm.taobao.org/base64-url
+720 verbose request uri http://registry.npm.taobao.org/random-bytes
+721 verbose request no auth needed
+722 info attempt registry request try #1 at 17:54:09
+723 http request GET http://registry.npm.taobao.org/random-bytes
+724 verbose linkBins on-headers@1.0.1
+725 verbose linkMans on-headers@1.0.1
+726 verbose rebuildBundles on-headers@1.0.1
+727 silly install resolved []
+728 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+729 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+730 info install on-headers@1.0.1
+731 verbose linkBins parseurl@1.3.1
+732 verbose linkMans parseurl@1.3.1
+733 verbose rebuildBundles parseurl@1.3.1
+734 info install parseurl@1.3.1
+735 info postinstall on-headers@1.0.1
+736 info linkStuff utils-merge@1.0.0
+737 silly linkStuff utils-merge@1.0.0 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+738 info linkStuff cookie@0.3.1
+739 silly linkStuff cookie@0.3.1 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+740 info postinstall parseurl@1.3.1
+741 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\on-headers-42ec51d7bc5bc010.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\on-headers
+742 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\parseurl-1d89bb3bc4c72e39.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\parseurl
+743 info linkStuff cookie-signature@1.0.6
+744 silly linkStuff cookie-signature@1.0.6 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+745 verbose linkBins utils-merge@1.0.0
+746 verbose linkMans utils-merge@1.0.0
+747 verbose rebuildBundles utils-merge@1.0.0
+748 verbose linkBins cookie@0.3.1
+749 verbose linkMans cookie@0.3.1
+750 verbose rebuildBundles cookie@0.3.1
+751 info install utils-merge@1.0.0
+752 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd\package.json
+753 info install cookie@0.3.1
+754 info postinstall utils-merge@1.0.0
+755 info postinstall cookie@0.3.1
+756 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\package.json
+757 info preinstall depd@1.1.0
+758 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\utils-merge-3736b08f5452e0db.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\utils-merge
+759 verbose linkBins cookie-signature@1.0.6
+760 verbose linkMans cookie-signature@1.0.6
+761 verbose rebuildBundles cookie-signature@1.0.6
+762 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\cookie-f1162248777cdd72.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie
+763 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd\package.json
+764 info install cookie-signature@1.0.6
+765 info postinstall cookie-signature@1.0.6
+766 info preinstall debug@2.2.0
+767 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd\package.json
+768 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\cookie-signature-bed7e9da9e17ec9f.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\cookie-signature
+769 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\package.json
+770 silly install resolved []
+771 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+772 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+773 silly prepareForInstallMany adding ms@0.7.1 from debug dependencies
+774 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\package.json
+775 info linkStuff depd@1.1.0
+776 silly linkStuff depd@1.1.0 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+777 silly cache add args [ 'ms@0.7.1', null ]
+778 verbose cache add spec ms@0.7.1
+779 silly cache add parsed spec Result {
+779 silly cache add   raw: 'ms@0.7.1',
+779 silly cache add   scope: null,
+779 silly cache add   name: 'ms',
+779 silly cache add   rawSpec: '0.7.1',
+779 silly cache add   spec: '0.7.1',
+779 silly cache add   type: 'version' }
+780 silly addNamed ms@0.7.1
+781 verbose addNamed "0.7.1" is a plain semver version for ms
+782 silly mapToRegistry name ms
+783 silly mapToRegistry using default registry
+784 silly mapToRegistry registry http://registry.npm.taobao.org/
+785 silly mapToRegistry data Result {
+785 silly mapToRegistry   raw: 'ms',
+785 silly mapToRegistry   scope: null,
+785 silly mapToRegistry   name: 'ms',
+785 silly mapToRegistry   rawSpec: '',
+785 silly mapToRegistry   spec: 'latest',
+785 silly mapToRegistry   type: 'tag' }
+786 silly mapToRegistry uri http://registry.npm.taobao.org/ms
+787 verbose addNameVersion registry:http://registry.npm.taobao.org/ms not in flight; fetching
+788 verbose request uri http://registry.npm.taobao.org/ms
+789 verbose request no auth needed
+790 info attempt registry request try #1 at 17:54:09
+791 http request GET http://registry.npm.taobao.org/ms
+792 verbose linkBins depd@1.1.0
+793 verbose linkMans depd@1.1.0
+794 verbose rebuildBundles depd@1.1.0
+795 info install depd@1.1.0
+796 info postinstall depd@1.1.0
+797 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\depd-19474b5557e930f5.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\depd
+798 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc\package.json
+799 info preinstall crc@3.4.0
+800 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc\package.json
+801 http 200 http://registry.npm.taobao.org/base64-url
+802 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+802 verbose headers   date: 'Fri, 12 Aug 2016 09:57:45 GMT',
+802 verbose headers   'content-type': 'application/json; charset=utf-8',
+802 verbose headers   'transfer-encoding': 'chunked',
+802 verbose headers   connection: 'keep-alive',
+802 verbose headers   'x-current-requests': '1',
+802 verbose headers   'x-readtime': '14',
+802 verbose headers   'content-encoding': 'gzip' }
+803 silly get cb [ 200,
+803 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+803 silly get     date: 'Fri, 12 Aug 2016 09:57:45 GMT',
+803 silly get     'content-type': 'application/json; charset=utf-8',
+803 silly get     'transfer-encoding': 'chunked',
+803 silly get     connection: 'keep-alive',
+803 silly get     'x-current-requests': '1',
+803 silly get     'x-readtime': '14',
+803 silly get     'content-encoding': 'gzip' } ]
+804 verbose get saving base64-url to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\base64-url\.cache.json
+805 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+806 http 200 http://registry.npm.taobao.org/random-bytes
+807 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+807 verbose headers   date: 'Fri, 12 Aug 2016 09:57:45 GMT',
+807 verbose headers   'content-type': 'application/json; charset=utf-8',
+807 verbose headers   'transfer-encoding': 'chunked',
+807 verbose headers   connection: 'keep-alive',
+807 verbose headers   'x-current-requests': '1',
+807 verbose headers   'x-readtime': '14',
+807 verbose headers   'content-encoding': 'gzip' }
+808 silly get cb [ 200,
+808 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+808 silly get     date: 'Fri, 12 Aug 2016 09:57:45 GMT',
+808 silly get     'content-type': 'application/json; charset=utf-8',
+808 silly get     'transfer-encoding': 'chunked',
+808 silly get     connection: 'keep-alive',
+808 silly get     'x-current-requests': '1',
+808 silly get     'x-readtime': '14',
+808 silly get     'content-encoding': 'gzip' } ]
+809 verbose get saving random-bytes to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\random-bytes\.cache.json
+810 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+811 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc\package.json
+812 silly install resolved []
+813 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+814 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+815 silly mapToRegistry name base64-url
+816 silly mapToRegistry using default registry
+817 silly mapToRegistry registry http://registry.npm.taobao.org/
+818 silly mapToRegistry data Result {
+818 silly mapToRegistry   raw: 'base64-url',
+818 silly mapToRegistry   scope: null,
+818 silly mapToRegistry   name: 'base64-url',
+818 silly mapToRegistry   rawSpec: '',
+818 silly mapToRegistry   spec: 'latest',
+818 silly mapToRegistry   type: 'tag' }
+819 silly mapToRegistry uri http://registry.npm.taobao.org/base64-url
+820 verbose addRemoteTarball http://registry.npm.taobao.org/base64-url/download/base64-url-1.2.2.tgz not in flight; adding
+821 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/base64-url/download/base64-url-1.2.2.tgz',
+821 verbose addRemoteTarball   '90af26ef8b0b67bc801b05eccf943345649008b3' ]
+822 info linkStuff crc@3.4.0
+823 silly linkStuff crc@3.4.0 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+824 silly addNameRange number 2 { name: 'random-bytes', range: '>=1.0.0 <1.1.0', hasData: true }
+825 silly addNameRange versions [ 'random-bytes', [ '1.0.0' ] ]
+826 silly addNamed random-bytes@1.0.0
+827 verbose addNamed "1.0.0" is a plain semver version for random-bytes
+828 silly mapToRegistry name random-bytes
+829 silly mapToRegistry using default registry
+830 silly mapToRegistry registry http://registry.npm.taobao.org/
+831 silly mapToRegistry data Result {
+831 silly mapToRegistry   raw: 'random-bytes',
+831 silly mapToRegistry   scope: null,
+831 silly mapToRegistry   name: 'random-bytes',
+831 silly mapToRegistry   rawSpec: '',
+831 silly mapToRegistry   spec: 'latest',
+831 silly mapToRegistry   type: 'tag' }
+832 silly mapToRegistry uri http://registry.npm.taobao.org/random-bytes
+833 verbose addRemoteTarball http://registry.npm.taobao.org/random-bytes/download/random-bytes-1.0.0.tgz not in flight; adding
+834 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/random-bytes/download/random-bytes-1.0.0.tgz',
+834 verbose addRemoteTarball   '4f68a1dc0ae58bd3fb95848c30324db75d64360b' ]
+835 info retry fetch attempt 1 at 17:54:09
+836 info attempt registry request try #1 at 17:54:09
+837 http fetch GET http://registry.npm.taobao.org/base64-url/download/base64-url-1.2.2.tgz
+838 verbose linkBins crc@3.4.0
+839 verbose linkMans crc@3.4.0
+840 verbose rebuildBundles crc@3.4.0
+841 info install crc@3.4.0
+842 info retry fetch attempt 1 at 17:54:09
+843 info attempt registry request try #1 at 17:54:09
+844 http fetch GET http://registry.npm.taobao.org/random-bytes/download/random-bytes-1.0.0.tgz
+845 info postinstall crc@3.4.0
+846 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\crc-06789efea05a9730.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\crc
+847 http 200 http://registry.npm.taobao.org/ms
+848 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+848 verbose headers   date: 'Fri, 12 Aug 2016 09:57:45 GMT',
+848 verbose headers   'content-type': 'application/json; charset=utf-8',
+848 verbose headers   'transfer-encoding': 'chunked',
+848 verbose headers   connection: 'keep-alive',
+848 verbose headers   'x-current-requests': '1',
+848 verbose headers   'x-readtime': '15',
+848 verbose headers   'content-encoding': 'gzip' }
+849 silly get cb [ 200,
+849 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+849 silly get     date: 'Fri, 12 Aug 2016 09:57:45 GMT',
+849 silly get     'content-type': 'application/json; charset=utf-8',
+849 silly get     'transfer-encoding': 'chunked',
+849 silly get     connection: 'keep-alive',
+849 silly get     'x-current-requests': '1',
+849 silly get     'x-readtime': '15',
+849 silly get     'content-encoding': 'gzip' } ]
+850 verbose get saving ms to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npm.taobao.org\ms\.cache.json
+851 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+852 silly mapToRegistry name ms
+853 silly mapToRegistry using default registry
+854 silly mapToRegistry registry http://registry.npm.taobao.org/
+855 silly mapToRegistry data Result {
+855 silly mapToRegistry   raw: 'ms',
+855 silly mapToRegistry   scope: null,
+855 silly mapToRegistry   name: 'ms',
+855 silly mapToRegistry   rawSpec: '',
+855 silly mapToRegistry   spec: 'latest',
+855 silly mapToRegistry   type: 'tag' }
+856 silly mapToRegistry uri http://registry.npm.taobao.org/ms
+857 verbose addRemoteTarball http://registry.npm.taobao.org/ms/download/ms-0.7.1.tgz not in flight; adding
+858 verbose addRemoteTarball [ 'http://registry.npm.taobao.org/ms/download/ms-0.7.1.tgz',
+858 verbose addRemoteTarball   '9cd13c03adbff25b65effde7ce864ee952017098' ]
+859 info retry fetch attempt 1 at 17:54:09
+860 info attempt registry request try #1 at 17:54:09
+861 http fetch GET http://registry.npm.taobao.org/ms/download/ms-0.7.1.tgz
+862 http fetch 200 http://registry.npm.taobao.org/random-bytes/download/random-bytes-1.0.0.tgz
+863 http fetch 200 http://registry.npm.taobao.org/base64-url/download/base64-url-1.2.2.tgz
+864 silly fetchAndShaCheck shasum 4f68a1dc0ae58bd3fb95848c30324db75d64360b
+865 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\random-bytes\download\random-bytes-1.0.0.tgz not in flight; adding
+866 verbose addTmpTarball already have metadata; skipping unpack for random-bytes@1.0.0
+867 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+868 silly fetchAndShaCheck shasum 90af26ef8b0b67bc801b05eccf943345649008b3
+869 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\base64-url\download\base64-url-1.2.2.tgz not in flight; adding
+870 verbose addTmpTarball already have metadata; skipping unpack for base64-url@1.2.2
+871 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+872 silly cache afterAdd random-bytes@1.0.0
+873 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\random-bytes\1.0.0\package\package.json not in flight; writing
+874 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+875 silly cache afterAdd base64-url@1.2.2
+876 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\base64-url\1.2.2\package\package.json not in flight; writing
+877 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+878 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\random-bytes\1.0.0\package\package.json written
+879 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\base64-url\1.2.2\package\package.json written
+880 silly install resolved [ { name: 'random-bytes',
+880 silly install resolved     description: 'URL and cookie safe UIDs',
+880 silly install resolved     version: '1.0.0',
+880 silly install resolved     contributors: [ [Object] ],
+880 silly install resolved     license: 'MIT',
+880 silly install resolved     repository:
+880 silly install resolved      { type: 'git',
+880 silly install resolved        url: 'https://github.com/crypto-utils/random-bytes' },
+880 silly install resolved     devDependencies:
+880 silly install resolved      { bluebird: '3.1.1',
+880 silly install resolved        istanbul: '0.4.2',
+880 silly install resolved        mocha: '2.3.4',
+880 silly install resolved        proxyquire: '1.2.0' },
+880 silly install resolved     files: [ 'LICENSE', 'HISTORY.md', 'README.md', 'index.js' ],
+880 silly install resolved     engines: { node: '>= 0.8' },
+880 silly install resolved     scripts:
+880 silly install resolved      { test: 'mocha --trace-deprecation --reporter spec --bail --check-leaks test/',
+880 silly install resolved        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --trace-deprecation --reporter dot --check-leaks test/',
+880 silly install resolved        'test-travis': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --trace-deprecation --reporter spec --check-leaks test/' },
+880 silly install resolved     keywords: [ 'bytes', 'generator', 'random', 'safe' ],
+880 silly install resolved     gitHead: '3dcd47425a3dfe858ee8debcd4db0c1222110bc3',
+880 silly install resolved     bugs: { url: 'https://github.com/crypto-utils/random-bytes/issues' },
+880 silly install resolved     homepage: 'https://github.com/crypto-utils/random-bytes',
+880 silly install resolved     _id: 'random-bytes@1.0.0',
+880 silly install resolved     _shasum: '4f68a1dc0ae58bd3fb95848c30324db75d64360b',
+880 silly install resolved     _from: 'random-bytes@>=1.0.0 <1.1.0',
+880 silly install resolved     _npmVersion: '1.4.28',
+880 silly install resolved     _npmUser: { name: 'dougwilson', email: 'doug@somethingdoug.com' },
+880 silly install resolved     maintainers: [ [Object] ],
+880 silly install resolved     dist:
+880 silly install resolved      { shasum: '4f68a1dc0ae58bd3fb95848c30324db75d64360b',
+880 silly install resolved        size: 2673,
+880 silly install resolved        noattachment: false,
+880 silly install resolved        tarball: 'http://registry.npm.taobao.org/random-bytes/download/random-bytes-1.0.0.tgz' },
+880 silly install resolved     directories: {},
+880 silly install resolved     publish_time: 1453015977071,
+880 silly install resolved     _cnpm_publish_time: 1453015977071,
+880 silly install resolved     _resolved: 'http://registry.npm.taobao.org/random-bytes/download/random-bytes-1.0.0.tgz' },
+880 silly install resolved   { name: 'base64-url',
+880 silly install resolved     version: '1.2.2',
+880 silly install resolved     description: 'Base64 encode, decode, escape and unescape for URL applications',
+880 silly install resolved     main: 'index.js',
+880 silly install resolved     files: [ 'LICENSE', 'README.md', 'index.js' ],
+880 silly install resolved     scripts:
+880 silly install resolved      { test: 'istanbul cover tape test.js',
+880 silly install resolved        jshint: 'jshint -c .jshintrc *.js',
+880 silly install resolved        'code-style': 'jscs -p google *.js',
+880 silly install resolved        'check-coverage': 'istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100',
+880 silly install resolved        coverage: 'open coverage/lcov-report/index.html' },
+880 silly install resolved     repository:
+880 silly install resolved      { type: 'git',
+880 silly install resolved        url: 'git://github.com/joaquimserafim/base64-url.git' },
+880 silly install resolved     keywords: [ 'base64', 'base64url' ],
+880 silly install resolved     author: { name: '@joaquimserafim' },
+880 silly install resolved     license: 'ISC',
+880 silly install resolved     bugs: { url: 'https://github.com/joaquimserafim/base64-url/issues' },
+880 silly install resolved     homepage: 'https://github.com/joaquimserafim/base64-url',
+880 silly install resolved     devDependencies:
+880 silly install resolved      { istanbul: '^0.3.5',
+880 silly install resolved        jscs: '^1.9.0',
+880 silly install resolved        jshint: '^2.5.11',
+880 silly install resolved        'pre-commit': '0.0.9',
+880 silly install resolved        tape: '^3.0.3',
+880 silly install resolved        which: '^1.0.8' },
+880 silly install resolved     'pre-commit': [ 'jshint', 'code-style', 'test', 'check-coverage' ],
+880 silly install resolved     gitHead: '7e5b7e351edbf67ed04e3475663d3a64e0c32035',
+880 silly install resolved     _id: 'base64-url@1.2.2',
+880 silly install resolved     _shasum: '90af26ef8b0b67bc801b05eccf943345649008b3',
+880 silly install resolved     _from: 'base64-url@1.2.2',
+880 silly install resolved     _npmVersion: '2.15.0',
+880 silly install resolved     _nodeVersion: '4.4.2',
+880 silly install resolved     _npmUser: { name: 'quim', email: 'joaquim.serafim@gmail.com' },
+880 silly install resolved     dist:
+880 silly install resolved      { shasum: '90af26ef8b0b67bc801b05eccf943345649008b3',
+880 silly install resolved        size: 1798,
+880 silly install resolved        noattachment: false,
+880 silly install resolved        tarball: 'http://registry.npm.taobao.org/base64-url/download/base64-url-1.2.2.tgz' },
+880 silly install resolved     maintainers: [ [Object] ],
+880 silly install resolved     _npmOperationalInternal:
+880 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+880 silly install resolved        tmp: 'tmp/base64-url-1.2.2.tgz_1459642531916_0.0884270598180592' },
+880 silly install resolved     directories: {},
+880 silly install resolved     publish_time: 1459642534289,
+880 silly install resolved     _cnpm_publish_time: 1459642534289,
+880 silly install resolved     _resolved: 'http://registry.npm.taobao.org/base64-url/download/base64-url-1.2.2.tgz' } ]
+881 info install random-bytes@1.0.0 into G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+882 info install base64-url@1.2.2 into G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+883 info installOne random-bytes@1.0.0
+884 verbose installOne of random-bytes to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe not in flight; installing
+885 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+886 info installOne base64-url@1.2.2
+887 verbose installOne of base64-url to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe not in flight; installing
+888 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+889 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\random-bytes-67e3210aabad5b03.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+890 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\base64-url-1070f31a1269649a.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+891 silly install write writing random-bytes 1.0.0 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+892 silly install write writing base64-url 1.2.2 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+893 verbose unbuild node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+894 verbose unbuild node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+895 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes is being purged from base G:\myServer\wamp\www\meadowlark
+896 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+897 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\random-bytes\1.0.0\package.tgz
+898 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+899 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes is being purged
+900 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+901 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url is being purged from base G:\myServer\wamp\www\meadowlark
+902 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+903 silly gunzTarPerm modes [ '777', '666' ]
+904 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\base64-url\1.2.2\package.tgz
+905 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+906 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url is being purged
+907 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+908 silly gunzTarPerm modes [ '777', '666' ]
+909 silly gunzTarPerm extractEntry package.json
+910 silly gunzTarPerm extractEntry package.json
+911 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+912 silly gunzTarPerm extractEntry README.md
+913 silly gunzTarPerm extractEntry LICENSE
+914 silly gunzTarPerm extractEntry README.md
+915 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+916 silly gunzTarPerm extractEntry LICENSE
+917 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+918 silly gunzTarPerm extractEntry index.js
+919 silly gunzTarPerm extractEntry HISTORY.md
+920 silly gunzTarPerm extractEntry index.js
+921 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+922 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url\package.json
+923 info preinstall base64-url@1.2.2
+924 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes\package.json
+925 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url\package.json
+926 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url\package.json
+927 info preinstall random-bytes@1.0.0
+928 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes\package.json
+929 silly install resolved []
+930 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+931 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+932 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes\package.json
+933 info linkStuff base64-url@1.2.2
+934 silly linkStuff base64-url@1.2.2 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules as its parent node_modules
+935 silly install resolved []
+936 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+937 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+938 verbose linkBins base64-url@1.2.2
+939 verbose linkMans base64-url@1.2.2
+940 verbose rebuildBundles base64-url@1.2.2
+941 info install base64-url@1.2.2
+942 info linkStuff random-bytes@1.0.0
+943 silly linkStuff random-bytes@1.0.0 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules as its parent node_modules
+944 info postinstall base64-url@1.2.2
+945 verbose linkBins random-bytes@1.0.0
+946 verbose linkMans random-bytes@1.0.0
+947 verbose rebuildBundles random-bytes@1.0.0
+948 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\base64-url-1070f31a1269649a.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\base64-url
+949 info install random-bytes@1.0.0
+950 info postinstall random-bytes@1.0.0
+951 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\random-bytes-67e3210aabad5b03.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe\node_modules\random-bytes
+952 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+953 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+954 info linkStuff uid-safe@2.1.1
+955 silly linkStuff uid-safe@2.1.1 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+956 verbose linkBins uid-safe@2.1.1
+957 verbose linkMans uid-safe@2.1.1
+958 verbose rebuildBundles uid-safe@2.1.1
+959 verbose rebuildBundles [ 'base64-url', 'random-bytes' ]
+960 info install uid-safe@2.1.1
+961 info postinstall uid-safe@2.1.1
+962 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\uid-safe-5ac0f0ceb30e8b96.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\uid-safe
+963 http fetch 200 http://registry.npm.taobao.org/ms/download/ms-0.7.1.tgz
+964 silly fetchAndShaCheck shasum 9cd13c03adbff25b65effde7ce864ee952017098
+965 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-11180-c6cba858\registry.npm.taobao.org\ms\download\ms-0.7.1.tgz not in flight; adding
+966 verbose addTmpTarball already have metadata; skipping unpack for ms@0.7.1
+967 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+968 silly cache afterAdd ms@0.7.1
+969 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\ms\0.7.1\package\package.json not in flight; writing
+970 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+971 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\ms\0.7.1\package\package.json written
+972 silly install resolved [ { name: 'ms',
+972 silly install resolved     version: '0.7.1',
+972 silly install resolved     description: 'Tiny ms conversion utility',
+972 silly install resolved     repository: { type: 'git', url: 'git://github.com/guille/ms.js.git' },
+972 silly install resolved     main: './index',
+972 silly install resolved     devDependencies: { mocha: '*', 'expect.js': '*', serve: '*' },
+972 silly install resolved     component: { scripts: [Object] },
+972 silly install resolved     gitHead: '713dcf26d9e6fd9dbc95affe7eff9783b7f1b909',
+972 silly install resolved     bugs: { url: 'https://github.com/guille/ms.js/issues' },
+972 silly install resolved     homepage: 'https://github.com/guille/ms.js',
+972 silly install resolved     _id: 'ms@0.7.1',
+972 silly install resolved     scripts: {},
+972 silly install resolved     _shasum: '9cd13c03adbff25b65effde7ce864ee952017098',
+972 silly install resolved     _from: 'ms@0.7.1',
+972 silly install resolved     _npmVersion: '2.7.5',
+972 silly install resolved     _nodeVersion: '0.12.2',
+972 silly install resolved     _npmUser: { name: 'rauchg', email: 'rauchg@gmail.com' },
+972 silly install resolved     maintainers: [ [Object] ],
+972 silly install resolved     dist:
+972 silly install resolved      { shasum: '9cd13c03adbff25b65effde7ce864ee952017098',
+972 silly install resolved        size: 2802,
+972 silly install resolved        noattachment: false,
+972 silly install resolved        tarball: 'http://registry.npm.taobao.org/ms/download/ms-0.7.1.tgz' },
+972 silly install resolved     directories: {},
+972 silly install resolved     publish_time: 1429573137957,
+972 silly install resolved     _cnpm_publish_time: 1429573137957,
+972 silly install resolved     _resolved: 'http://registry.npm.taobao.org/ms/download/ms-0.7.1.tgz' } ]
+973 info install ms@0.7.1 into G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+974 info installOne ms@0.7.1
+975 verbose installOne of ms to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug not in flight; installing
+976 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+977 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\ms-f28341ed4ad6ff8f.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+978 silly install write writing ms 0.7.1 to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+979 verbose unbuild node_modules\express-session\node_modules\debug\node_modules\ms
+980 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms is being purged from base G:\myServer\wamp\www\meadowlark
+981 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+982 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\ms\0.7.1\package.tgz
+983 verbose tar unpacking to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+984 silly gentlyRm G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms is being purged
+985 verbose gentlyRm don't care about contents; nuking G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+986 silly gunzTarPerm modes [ '777', '666' ]
+987 silly gunzTarPerm extractEntry package.json
+988 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+989 silly gunzTarPerm extractEntry .npmignore
+990 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+991 silly gunzTarPerm extractEntry README.md
+992 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+993 silly gunzTarPerm extractEntry LICENSE
+994 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+995 silly gunzTarPerm extractEntry index.js
+996 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+997 silly gunzTarPerm extractEntry History.md
+998 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+999 verbose write writing to G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms\package.json
+1000 info preinstall ms@0.7.1
+1001 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms\package.json
+1002 verbose readDependencies loading dependencies from G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms\package.json
+1003 silly install resolved []
+1004 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+1005 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+1006 info linkStuff ms@0.7.1
+1007 silly linkStuff ms@0.7.1 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules as its parent node_modules
+1008 verbose linkBins ms@0.7.1
+1009 verbose linkMans ms@0.7.1
+1010 verbose rebuildBundles ms@0.7.1
+1011 info install ms@0.7.1
+1012 info postinstall ms@0.7.1
+1013 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\ms-f28341ed4ad6ff8f.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug\node_modules\ms
+1014 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+1015 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+1016 info linkStuff debug@2.2.0
+1017 silly linkStuff debug@2.2.0 has G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules as its parent node_modules
+1018 verbose linkBins debug@2.2.0
+1019 verbose linkMans debug@2.2.0
+1020 verbose rebuildBundles debug@2.2.0
+1021 verbose rebuildBundles [ 'ms' ]
+1022 info install debug@2.2.0
+1023 info postinstall debug@2.2.0
+1024 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\debug-3d8c0d969d962b43.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session\node_modules\debug
+1025 verbose about to build G:\myServer\wamp\www\meadowlark\node_modules\express-session
+1026 info build G:\myServer\wamp\www\meadowlark\node_modules\express-session
+1027 info linkStuff express-session@1.14.0
+1028 silly linkStuff express-session@1.14.0 has G:\myServer\wamp\www\meadowlark\node_modules as its parent node_modules
+1029 verbose linkBins express-session@1.14.0
+1030 verbose linkMans express-session@1.14.0
+1031 verbose rebuildBundles express-session@1.14.0
+1032 verbose rebuildBundles [ 'cookie',
+1032 verbose rebuildBundles   'cookie-signature',
+1032 verbose rebuildBundles   'crc',
+1032 verbose rebuildBundles   'debug',
+1032 verbose rebuildBundles   'depd',
+1032 verbose rebuildBundles   'on-headers',
+1032 verbose rebuildBundles   'parseurl',
+1032 verbose rebuildBundles   'uid-safe',
+1032 verbose rebuildBundles   'utils-merge' ]
+1033 info install express-session@1.14.0
+1034 info postinstall express-session@1.14.0
+1035 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\express-session-0b40a810d4b407fe.lock for G:\myServer\wamp\www\meadowlark\node_modules\express-session
+1036 verbose validateInstall loading G:\myServer\wamp\www\meadowlark\package.json for validation
+1037 verbose stack Error: The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+1037 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:125:32
+1037 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:268:7
+1037 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+1037 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+1037 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+1037 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+1037 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+1037 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+1037 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+1037 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+1038 verbose cwd G:\myServer\wamp\www\meadowlark
+1039 error Windows_NT 6.1.7601
+1040 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "express-session"
+1041 error node v4.4.7
+1042 error npm  v2.15.8
+1043 error code EPEERINVALID
+1044 error peerinvalid The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+1044 error peerinvalid Peer grunt-exec@1.0.0 wants grunt@>=0.4
+1044 error peerinvalid Peer grunt-cafe-mocha@0.1.13 wants grunt@~0.4.1
+1044 error peerinvalid Peer grunt-contrib-jshint@1.0.0 wants grunt@>=0.4.0
+1045 verbose exit [ 1, true ]

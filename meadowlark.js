@@ -1,9 +1,14 @@
 var express = require("express");
 var app = express();
 
+//凭证引入来
+var credentials = require('./credentials.js');
+
 //引入自己的模块
 var randomTest = require('./libs/myMoudle.js');
 
+//引入文件上传模版
+var formidable = require('formidable');
 
 //设置handlebars视图引擎
 var handlebars = require('express3-handlebars')
@@ -11,10 +16,19 @@ var handlebars = require('express3-handlebars')
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
+//设置端口
 app.set("port", process.env.PORT || 3000);
 
 //static中间件
 app.use(express.static(__dirname + '/public'));
+
+//Post方式中间件
+app.use(require('body-parser')());
+
+//cookie相关中间件
+app.use(require('cookie-parser')(credentials.cookieSecret));
+//会话中间件
+app.use(require('express-session')());
 
 //感受视图传递动态信息的强大
 /*var arrTest = [
@@ -24,12 +38,57 @@ app.use(express.static(__dirname + '/public'));
 	'后天是星期五~！'
 ]*/
 
-//todo 加上路由
+
+//post请求 路由，指定引擎模版
+app.get('/newsletter', function(req, res){
+	res.render('newsletter', { csrf : 'CSRF token goes here' });
+});
+
+//表单post请求进来
+app.post('/process', function(req, res){
+	console.log('body', req.body);
+	res.redirect(303, '/thank-you');
+});
+
+//post请求 路由，指定引擎模版
+app.get('/ajax', function(req, res){
+	console.log('in ajax route....');
+	res.render('ajax', { csrf : 'CSRF token goes here' });
+});
+
+
+//ajax post请求进来
+app.post('/process2', function(req, res){
+	if( req.xhr || req.accepts('json,html') === 'json' ){
+		res.send({ success : true });
+	}else{
+		res.redirect(303, '/thank-you');
+	}
+});
+
+//上传图片页面 请求进来
+app.post('/photo/:year/:month', function(req, res){
+	var form = new formidable.IncomingForm();
+	form.parse(req, function(err, fields, files){
+		if(err) return res.redirect(303, '/error');
+		console.log('received fields:');
+		console.log(fields);
+		console.log('received files:');
+		console.log(files);
+		//保存到数据库或者其他处理
+		
+		res.redirect(303, '/thank-you');
+	});
+});
+
+//todo 加上路由 首页
 app.get('/', function(req, res){
 	//res.type('text/plain');
 	//res.send("Meadowlark Travel");	
 	res.render('home');
 });
+
+//关于页面 路由
 app.get('/about', function(req, res){
 	//res.type('text/plain');
 	//res.send('About Meadowlark Travel');	
@@ -37,11 +96,23 @@ app.get('/about', function(req, res){
 	res.render('about', { arrTest : randomTest.getAnswer() });
 });
 
+//图片上传页面路由
+app.get('/photo', function(req, res){
+	var now = new Date();
+	res.render('uploadPhotoFile', { year : now.getFullYear(), month : now.getMonth() });
+})
+
 //todo 定制404页面
 app.use(function(req, res){
 		res.status(404);
 		//res.send('404 - Not Found');
 		res.render('404');
+});
+
+//todo 定制303页面
+app.use(function(req, res){
+		res.status(303);
+		res.render('303');
 });
 
 //todo 定制500页面
@@ -254,7 +325,10 @@ app.listen(app.get('port'), function(){
 					res.redirect(303, '/database-error');
 				}
 			});
+		
 
+		***笔记：
+			 cp bower_components/bootstrap/dist/css/bootstrap.min.css public/css
 			
 		14）、Handlebars模版引擎
 			之前用javascript生成html
@@ -294,6 +368,90 @@ app.listen(app.get('port'), function(){
 					参数为false 时，它才会执行。
 
 			
+			4、向服务器发送客户端的数据
+				通常来说，有2种方式，一种是查询字符串，一种是请求正文。
+				查询字符串的方式，通过get的请求
+				请求正文的方式，通过post请求
+				有一种误解：任务post安全，get方式不安全
+				其实，如果使用https，那2者都是安全的，不用的话， 2者都不安全。
+
+			5、
+				<form action="/process" method="POST">
+					<input type="hidden" name="hush" val="hidden, but not secret!">
+					<div>
+					<label for="fieldColor">Your favorite color: </label>
+					<input type="text" id="fieldColor" name="color">
+					</div>
+					<div>
+					<button type="submit">Submit</button>
+					</div>
+				</form>
+				action 的值被指定为用于接收表单数据的URL。
+				我建议你始终都为action 提供一个有效值，即使是使用AJAX提交（这会防止你丢失数据）
+				从服务器的角度来说，最重要的属性应该是name,服务器才能识别字段。
+				注意隐藏域，不能使用它来存放秘密和敏感信息。
+
+			6、Express表单处理
+				GET进行表单处理： 在req.query对象中
+				POST进行表单处理： 需要引入中间件来解析URL编码体，
+					首先:安装body-parser中间件（npm install --save body-parser）
+					然后：引入，app.use(require('body-parser')()); 
+					此时： req.body可用 
+				
+				新建newsletter.handlebars，使用表单提交的方式。
+
+			7、使用ajax进行表单提交：
+				新建ajax.handlebars 完成测试
+
+			8、使用Formidable，进行处理文件上传
+				必须指定enctype="multipart/form-data" 来启用文件上传
+				安装： npm install --save formidable
+
+	15）、Cookie与回话
+		当我在浏览器中加载页面的时候，然后转到统一网站的另一个页面。这个时候，我们的服务器，和浏览器都没办法知道，这个统一浏览器访问统一网站。
+		http是无状态协议。
+		我们需要用某种办法在http上建立状态。于是有了cookie和会话。
+		cookie:  服务器发送一点信息，浏览器在一段时间内保存它。
+		a、cookie对用户来说不是加密的
+		b、用户可以删除或禁用cookie
+		c、一般的cookie可以被篡改
+		d、cookie可以用于攻击
+		e、如果你滥用cookie，用户会注意到
+		f、如果可以选择，会话要优于cookie
+
+		1、为了保证cookie的安全，需要一个cookie秘钥，它是一个字符串。服务器在把cookie发送到客户端之前，
+		会进行加密。是一个随机生成的字符串。
+
+		2、外化第三方凭证的做法：
+			首先：新建credentials.js  :
+				module.exports = {
+					cookieSecret: ' 把你的cookie 秘钥放在这里',
+				};
+			然后，为了防止把这个文件，添加到源码库中，我们在.gitignore文本文件里面加上： credentials.js
+
+			接下来： 将凭证引入程序：var credentials = require('./credentials.js');
+
+			接下来： 需要引入中间件cookie-parser 
+					安装：npminstall --save cookie-parser
+					写入： app.use(require('cookie-parser')(credentials.cookieSecret));
+
+		3、会话session
+			会话是更方便的状态维护
+			实现会话推荐的方案：只在cookie里存放一个唯一标识，其他东西都放在服务器。
+			那必须找到一个地方来储存它------内存会话
+			首先： 安装express-session （npm install --save express-session）
+			然后： 在链入cookie-parser 之后链入express-session；
+				app.use(require('cookie-parser')(credentials.cookieSecret));
+				app.use(require('express-session')());
+			参数：key  会话标识cookie名称，唯一的。
+				  store 会话存储的实例
+				  cookie 会话 cookie 的 cookie 设置
+			使用会话：
+				req.session.userName = 'Anonymous';
+				var colorScheme = req.session.colorScheme || 'dark';
+			要删除会话，可以用JavaScript 的delete操作符：
+
+
 			
 */
 
