@@ -4,11 +4,91 @@ var app = express();
 //凭证引入来
 var credentials = require('./credentials.js');
 
+//引入模型对象
+var Vacation = require('./models/vacation.js');
+
 //引入自己的模块
 var randomTest = require('./libs/myMoudle.js');
 
 //引入文件上传模版
 var formidable = require('formidable');
+
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
+//引入mongoose  创建数据库的连接
+var mongoose = require('mongoose');
+var opts = {
+	server :{
+		socketOptions: { keepAlive: 1 }
+	}
+}
+/*
+opts 对象是可选的，但我们想指定keepAlive 选项，以防止长期运行的应用程序（比如网
+站）出现数据库连接错误。
+ */
+
+// switch(app.get('env')){
+// 	case 'development':
+// 		mongoose.connect(credentials.mongo.development.connectionString, opts);
+// 	break;
+// 	case 'production':
+// 		mongoose.connect(credentials.mongo.production.connectionString, opts);
+// 	break;
+// 	default:
+// 		throw new Error('Unknown execution environment: ' + app.get('env'));
+// }
+
+
+//创建度假包初始化数据，使用find save两个方法
+// Vacation.find(function(err, vacations){
+// 	if( vacations.length ) return; //有了就不用重复添加了
+// 	new Vacation({
+// 		name : 'Hood River Day Trip',
+// 		slug: 'hood-river-day-trip',
+// 		category: 'Day Trip',
+// 		sku: 'HR199',
+// 		description: 'Spend a day sailing on the Columbia and ' +
+// 'enjoying craft beers in Hood River!',
+// 		priceInCents: 9995,
+// 		tags: ['day trip', 'hood river', 'sailing', 'windsurfing', 'breweries'],
+// 		inSeason: true,
+// 		maximumGuests: 16,
+// 		available: true,
+// 		packagesSold: 0
+// 	}).save();
+
+// 	new Vacation({
+// 		name: 'Oregon Coast Getaway',
+// 		slug: 'oregon-coast-getaway',
+// 		category: 'Weekend Getaway',
+// 		sku: 'OC39',
+// 		description: 'Enjoy the ocean air and quaint coastal towns!',
+// 		priceInCents: 269995,
+// 		tags: ['weekend getaway', 'oregon coast', 'beachcombing'],
+// 		inSeason: false,
+// 		maximumGuests: 8,
+// 		available: true,
+// 		packagesSold: 0,
+// 	}).save();
+
+// 	new Vacation({
+// 		name: 'Rock Climbing in Bend',
+// 		slug: 'rock-climbing-in-bend',
+// 		category: 'Adventure',
+// 		sku: 'B99',
+// 		description: 'Experience the thrill of climbing in the high desert.',
+// 		priceInCents: 289995,
+// 		tags: ['weekend getaway', 'bend', 'high desert', 'rock climbing'],
+// 		inSeason: true,
+// 		requiresWaiver: true,
+// 		maximumGuests: 4,
+// 		available: false,
+// 		packagesSold: 0,
+// 		notes: 'The tour guide is currently recovering from a skiing accident.',
+// 	}).save();
+
+// });
 
 //设置handlebars视图引擎
 var handlebars = require('express3-handlebars')
@@ -19,6 +99,14 @@ app.set('view engine', 'handlebars');
 //设置端口
 app.set("port", process.env.PORT || 3000);
 
+//即显消息
+/*app.use(function(req, res, next){
+	//如果有即显消息，把它传到上下文中，然后清除它
+	res.local.flash = req.session.flash; //报错 找不到falsh 
+	delete req.session.flash;
+	next();
+});*/
+
 //static中间件
 app.use(express.static(__dirname + '/public'));
 
@@ -26,9 +114,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(require('body-parser')());
 
 //cookie相关中间件
-app.use(require('cookie-parser')(credentials.cookieSecret));
+app.use(cookieParser(credentials.cookieSecret));
 //会话中间件
-app.use(require('express-session')());
+app.use(session());
 
 //感受视图传递动态信息的强大
 /*var arrTest = [
@@ -49,12 +137,69 @@ app.post('/process', function(req, res){
 	console.log('body', req.body);
 	res.redirect(303, '/thank-you');
 });
+/*app.post('/process', function(req, res){
+	var name = req.body.name || '',
+		email = req.body.email || '';
+		//输入验证
+		if( !email.match(VALID_EMAIL_REGEX) ){
+			if( req.xhr ) return res.json({ error:"邮箱验证不通过" });
+			req.session.flash = {
+				type :'danger',
+				intro : '验证错误',
+				message : '邮箱验证出错'
+			}
+			return res.redirect(303,'/');
+		}
+		new NewsletterSignup({ name: name, email: email }).save(function(err){
+			if(err) {
+				if(req.xhr) return res.json({ error: 'Database error.' });
+				req.session.flash = {
+					type: 'danger',
+					intro: 'Database error!',
+					message: 'There was a database error; please try again later.',
+				}
+				return res.redirect(303, '/');
+			}
+			if(req.xhr) return res.json({ success: true });
+				req.session.flash = {
+				type: 'success',
+				intro: 'Thank you!',
+				message: 'You have now been signed up for the newsletter.',
+			};
+			return res.redirect(303, '/');
+		});
+});*/
+
 
 //post请求 路由，指定引擎模版
 app.get('/ajax', function(req, res){
 	console.log('in ajax route....');
 	res.render('ajax', { csrf : 'CSRF token goes here' });
 });
+
+//度假包路由
+app.get('/vacations', function(req, res){
+	Vacation.find({ available:true }, function(err, vacations){
+		var context = {
+			vacations: vacations.map(function(vacation){
+				return {
+				sku: vacation.sku,
+				name: vacation.name,
+				description: vacation.description,
+				price: vacation.getDisplayPrice(),
+				inSeason: vacation.inSeason,
+				}
+			})
+		};
+		res.render('vacations', context);
+	});
+})
+/*
+我们为什么要将从数据库里返回来的产品映射为几乎一样的对象？
+其中一个原因是Handlebars 视图无法在表达式中使用函数的输出。
+所以为了以一个整齐的格式化方式显示价格，
+我们必须将其转为简单的字符串属性。
+ */
 
 
 //ajax post请求进来
@@ -432,7 +577,7 @@ app.listen(app.get('port'), function(){
 			接下来： 将凭证引入程序：var credentials = require('./credentials.js');
 
 			接下来： 需要引入中间件cookie-parser 
-					安装：npminstall --save cookie-parser
+					安装：npm install --save cookie-parser
 					写入： app.use(require('cookie-parser')(credentials.cookieSecret));
 
 		3、会话session
@@ -451,8 +596,208 @@ app.listen(app.get('port'), function(){
 				var colorScheme = req.session.colorScheme || 'dark';
 			要删除会话，可以用JavaScript 的delete操作符：
 
+		
+		4、即显消息：  不破坏用户导航的前提下向用户提供反馈的办法
+		   会话的方式来实现即显消息是最简单的方式。
+		   flash.message外面用了3个大括号，可以使用简单的html。
+		   如果会话中有flash对象，添加到上下文中显示出来，
+		   显示过一次的，需要从会话中去掉，避免下一次请求时再次显示。
+		   会话的作用：
+		   		当你登录后，会创建一个会话，之后不用在每次重新加载页面的时候
+		   	再登录一次。
 
+
+	16）、中间件
+			中间件是在管道中执行
+			通过调用app.use 向管道中插入中间件。
+			a、路由处理器（app.get、app.post 等，经常被统称为 app.VERB）可以被看作只处理特定
+HTTP 谓词（GET、POST 等）的中间件
+			b、路由处理器的第一个参数必须是路径。
+			c、路由处理器和中间件的参数中都有回调函数
+			d、如果不调用 next()，管道就会被终止，也不会再有处理器或中间件做后续处理。如果
+你不调用next()，则应该发送一个响应到客户端（res.send、res.json、res.render 等）；
+如果你不这样做，客户端会被挂起并最终导致超时。
+			e、如果调用了 next()，一般不宜再发送响应到客户端。如果你发送了，管道中后续的中
+间件或路由处理器还会执行，但它们发送的任何响应都会被忽略。
+
+
+			例子：	
+					app.use(function(req, res, next){
+						console.log('processing request for "' + req.url + '"....');
+						next();
+					});
+					app.use(function(req, res, next){
+						console.log('terminating request');
+						res.send('thanks for playing!');
+					// 注意，我们没有调用next()……这样请求处理就终止了
+					});
+					app.use(function(req, res, next){
+						console.log('whoops, i\'ll never get called!');
+					});
+					
+					这里有三个中间件，第一个，请求传给下一个中间件之前，记录了一条消息。
+					下一个中间件真正处理请求。 如果在第二个中间件里，我们不写res.send，导致，不会有
+					响应返回到客户端，最终造成客户端超时，而第三个中间件也不会执行。
+
+				
+			1、常用的中间件
+				Express中捆绑了Connect,它包含了大部分常用的中间件。
+				建议安装： npm install --save connect
+				var connect = require(connect);
+
+				a、app.use(connect.basicAuth)();
+					提供基本的访问授权。 需要又快又容易的东西，并且在使用Https的情况下，才使用。
+
+				b、npm install --save body-parser
+					app.use( require(body-parser)() )
+					只连入json何urlencoded的便利中间件
+
+				c、urlencoded
+					解析互联网媒体类型为application/x-www-form-urlencoded的请求体
+					这是处理表单和ajax请求最常用的方式。
+
+				d、cookie-parser 
+					提供cookie支持
+
+				e、cookie-session
+					提供cookie存储的会话支持
+
+				f、 express-session
+					提供会话ID（存在cookie里）的会话支持
+
+				g、directory
+					app.use(connect.directory())
+					提供静态文件的目录清单支持。
+
+				h、static
+					app.use( express.static(path_to_static_files()) )
+					提供对静态文件的支持
 			
+
+	17）、发送邮件
+			首先： 安装Nodemailer包
+				npm install --save nodemailer
+			然后：引入nodemailer包，创建一个nodemailer实例
+				var nodemailer = require("nodemailer");
+				var mailTransport = nodemailer.createTransport("SMTP",{
+					service : 'Gmail',
+					auth :{
+						user :creadenticals.gmail.user,
+						pass : creadentials.gmail.password
+					}
+				});
+			接下来：发送邮件
+				mailTransport.sendMail({
+					from: '"Meadowlark Travel" <info@meadowlarktravel.com>',
+					to: 'joecustomer@gmail.com',
+					subject: 'Your Meadowlark Travel Tour',
+					text: 'Thank you for booking your trip with Meadowlark Travel.'+
+					'We look forward to your visit!',
+				}, function(err){
+					if(err) console.error( 'Unable to send email: ' + error );
+				});
+
+			封装邮件功能：
+				创建模块email.js
+			使用：
+				var emailService = require('./lib/email.js')(credentials);
+				emailService.send('joecustomer@gmail.com', 'Hood River tours on sale today!','Get \'em while they\'re hot!');
+
+
+
+	18）、
+		云持久化
+		强烈建议利用这些便宜好用的服务。
+		http://aws.amazon.com/sdkfornodejs
+
+
+	19）、数据库，
+		在node程序中集成关系型数据库很容易，到那时NoSQL几乎是专为node设计的。
+		NoSQL数据库中文档数据库最流行，文档数据库中MongoDB最佳。
+
+
+		mongolab入手：
+			到http://mongolab.com
+			登录
+			
+			1、首先：安装mongoose模块
+			npm install --save mongoose
+			2、接下来： 将数据库凭证添加到creadentials.js
+				mongo: {
+					development: {
+						connectionString: 'your_dev_connection_string',
+					},
+					production: {
+						connectionString: 'your_production_connection_string',
+					},
+				},
+
+			3、创建数据库的连接
+				var mongoose = require('mongoose');
+				var opts = {
+					server: {
+					socketOptions: { keepAlive: 1 }
+				}
+				};
+				switch(app.get('env')){
+						case 'development':
+						mongoose.connect(credentials.mongo.development.connectionString, opts);
+					break;
+						case 'production':
+						mongoose.connect(credentials.mongo.production.connectionString, opts);
+					break;
+					default:
+						throw new Error('Unknown execution environment: ' + app.get('env'));
+				}
+
+			4、创建模式何模型
+				var mongoose = require('mongoose');
+				var vacationSchema = mongoose.Schema({
+					name: String,
+					slug: String,
+					category: String,
+					sku: String,
+					description: String,
+					priceInCents: Number,
+					tags: [String],
+					inSeason: Boolean,
+					available: Boolean,
+					requiresWaiver: Boolean,
+					maximumGuests: Number,
+					notes: String,
+					packagesSold: Number,
+				});
+				vacationSchema.methods.getDisplayPrice = function(){
+					return '$' + (this.priceInCents / 100).toFixed(2);
+				};
+				var Vacation = mongoose.model('Vacation', vacationSchema);
+				module.exports = Vacation;
+
+				这段代码，首先声明一些需要的属性，以及属性的类型。
+				还可以定义模式的方法。
+				有了模式之后，我们就可以使用mongoose.model创建模型
+				Vacation非常像面向对象编程中的类。
+
+				在主程序中使用这个模型：
+					var Vacation = require('./models/vacation.js');
+				
+				添加数据：
+					使用了2个方法，一个是find，查找数据库中的所有Vacation实例，
+					并且返回结果列表传递给回调函数并调用。
+					调用save方法，保存到数据库中。
+
+				
+				
+			5、用mongoDB存储会话数据	
+				用session-mongoose包提供回话存储
+				安装：npm install --save session-mongoose
+				主程序设置：
+					var MongoSessionStore = require('session-mongoose')(require('connect'));
+					var sessionStore = new MongoSessionStore({ url:
+					credentials.mongo.connectionString });
+					app.use(require('cookie-parser')(credentials.cookieSecret));
+					app.use(require('express-session')({ store: sessionStore }));
+
 */
 
 
