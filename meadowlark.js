@@ -797,7 +797,67 @@ HTTP 谓词（GET、POST 等）的中间件
 					credentials.mongo.connectionString });
 					app.use(require('cookie-parser')(credentials.cookieSecret));
 					app.use(require('express-session')({ store: sessionStore }));
-
+	
+	
+	20、bower安装到指定的目录下：
+		新建文件：   .bowerrc
+		内容：
+			{
+				"directory" : "public/libs"
+			}
+	
+	21、要弄配置文件
+		方便拷贝
+		只需要拷贝配置文件，进行npm install bower install  就可以安装所有前后端的依赖
+		
+		首先：前端的：	bower init  
+			生成bower.json
+		注意，要在cmd输入bower init 在git bash会报错
+	
+		后端的： npm init	
+			生成 package.json
+			
+		这样很容易就跑起来。
+	
+	22、希望，自动启动服务，不用总是手工操作，我们需要用自动化工具grunt
+			首先： 全局安装grunt    cli是可以允许你在任何的项目目录去启动它
+				npm install grunt-cli -g
+			
+			新建一个文件 Gruntfile.js
+						
+			npm install grunt-contrib-watch --save-dev  //监听文件变化，重新执行注册好的任务
+			npm install grunt-nodemon --save-dev  //监听app.js项目入口文件，重新保存后，重新开启服务。
+			npm install grunt-concurrent --save-dev  //针对慢任务  优化构建时间
+		
+		
+		
+	23、注册登录模型设计	
+		首先：
+			
+			要有模型，先得有模式，就是schemas/
+		我们新建一个user.js	
+		name
+		password
+		注意密码要加密 
+		hash 加盐 
+		
+		用bcrypt模块，安装npm install bcrypt --save-dev，引入进来。
+		随机生成一些数据，跟hash混合在一起
+		增加计算强度  
+		
+		在用户注册的时候，我们存储密码的时候 save
+		对密码进行加密处理
+		
+		
+		然后：
+			前台的登陆/注册的页面入口，写好。
+			
+		
+		接下来： 来到models/
+			新建一个user.js
+			创建模型
+			然后来到app.js
+			引入var User = require("./models/user");
 */
 
 
