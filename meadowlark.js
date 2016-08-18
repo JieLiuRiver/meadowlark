@@ -856,8 +856,101 @@ HTTP 谓词（GET、POST 等）的中间件
 		接下来： 来到models/
 			新建一个user.js
 			创建模型
+			
 			然后来到app.js
 			引入var User = require("./models/user");
+			
+			接下来写路由：
+				app.post('/user/signup', function(req, res){
+					var _user = req.body;
+					console.log('req.body',req.body);
+					var user = new User(_user);
+					user.save(function(err, user){
+						if( err ){
+							console.log(err);
+						}
+						console.log(user);
+					});
+				})
+			这里会报错，说bCrypt.js没有回调，那我们可以这么处理：
+				打开bCrypt.js
+					把下面这一段找出来：
+						if(!callback) {
+							throw "No callback function was given."
+						}
+					用下面的来代替：
+						if(typeof callback == 'undefined') {
+							callback = progress;
+							progress = null;
+						}
+		
+		接下来，创建一个用户名称列表页面，userlist.handlebars
+		为它分配路由，把用户都展现出来，方便查看。
+				
+			当用户注册的时候，注册名在mongoose里面已经存在了，就不能注册，这里需要判断一下。
+			
+			
+			
+		用户登录：
+			拿到用户名name,
+			
+			如果数据库中不存在，
+			如果存在，对密码进行匹配，匹配成功，即登录成功
+			
+		保持用户登录/退出状态：
+			通过服务器与客户端的会话：
+				req.session.user = user;  //匹配成功之后，意味着这个user是登录成功的，因此把它存起来。
+				要用session，我们要用其中间件：
+					app.use(express.session({
+						secret : "imooc"	
+					}));
+				要用session，需要引入cookie中间件，
+					app.use( express.cookieParser() );
+				
+			注意，我们在密码匹配成功之后，作了一个跳转到首页的处理，
+			因此我们在首页的路由get('/')里，能判断是否有session.user
+			特别注意：	如果用的是4.0以上版本的express，那session  cookieParser都已经从express里分离出来了，是一个独立的模块，应该独立安装加载进来。具体的安装使用方法，在前文有。
+			
+			
+			
+		问题：  登陆，跳转到首页，找到对应的session会话了，但是，当我重启服务，在刷新首页，会发现会话undefined，  怎么解决？
+			会话其实就是用来跟踪用户，确定用户的身份的。
+			一个用户的所有的请求是一个会话
+			另外一个用户的所有请求是另外要给会话
+			会话与会话之间是相互独立的
+			去超市买东西，自己的东西放在自己的购物车里，别人的不能放到我的购物车里来。			而我们的http协议是一个无状态的协议，请求完成就断掉。
+			也就是说服务器没办法跟踪下去
+			因此需要引入一个机制弥补它
+			一般用cookie 或 session
+			cookie是客户端记录信息
+				以前都用cookie, 主要是每一次http请求，都会给服务器带来当前域下的cookie值，服务器来解析cookie,来辨识当前用户的信息。
+			而session是服务器端记录信息
+				cookie和session综合使用
+				当程序需要为某一个请求创建session的时候， 服务会首先检查这个请求里面，有没有session标识，就是sessionid; 如果有，意味着服务器已经给这个用户创建过session， 服务器要做的只是根据sessionid找出对应的session信息即可；  如果没有，那就为它创建一个session，并且创建一个唯一的sessionid， 这个session返回给客户端保存起来，保存在cookie里。
+					session服务器怎么保存持久？
+						1，内存
+						2，mongoDB
+						3，redis数据库
+			
+			
+		24, 利用mongodb来做会话的持久化
+			需要用到一个中间件 connect-mongo
+			安装：
+				npm install connect-mongo --save-dev
+			
+			引入进来,传入express：
+			var session = require("express-session")//注意这个要在前头
+			var mongoStore = require('connect-mongo')(session);
+			
+			//然后再这里写入 store ， 创建一个new 实例， 传入url,就是本地芒果数据库地址，还有collection名字
+			app.use(session({
+				secret : "imooc",
+				store : new mongoStore({
+					url : "mongodb://localhost/imooc",
+					collection : "sessions"
+				})
+			}));
+			
 */
 
 
