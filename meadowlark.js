@@ -951,6 +951,154 @@ HTTP 谓词（GET、POST 等）的中间件
 				})
 			}));
 			
+			
+		25、注销用户，用户退出功能
+			我们在公用模块main.handlebars里，做一个判断，
+			如果说存在user会话的话，显示“退出”，没有不存在，显示“登录/注册”	
+			后台入口文件里面，添加一个退出的get方法，然后用delete掉user，然后重定向到首页	
+			
+			//logout
+			app.get('/logout', function(req, res){
+				delete req.session.user;
+				delete app.locals.user;
+				res.redirect('/');
+			});
+			
+			//home    '/'路由
+			if( _user != undefined ){
+				app.locals.user = _user; //放到本地变量去
+			}
+			
+		
+		26、上面的是在访问 '/' 首页的时候，才做了一件事： app.locals.user = _user;
+		这并不全面，如果我不是访问'/'，就没有做这个处理。 因策我们需要对这里的逻辑重新处理一下：
+			app.use(function(req, res, next){
+				var _user = req.session.user;
+				if( _user ){
+					app.locals.user = _user;
+				}
+				return next();
+			})
+			
+			
+		27、app.js 很乱，我们需要模块分离，重新处理
+				首先： 路由这一块，我们独立放。
+					新建config文件夹
+						新建routes.js
+				
+				app.js
+				require('./config/routes')(app);
+				
+				routes.js
+				module.exports = function(app){}
+		
+		
+		28、 配置入口文件
+				在开发环境下，报错信息没有出来，我们做这个配置。
+				我们在开发环境下，会关心，客户端到服务器，有多少个请求，
+				这些请求是什么类型，状态是怎么样的，我们需要做这个console.log出来。
+				
+				我们要区分本地环境，线上的测试环境，生产环境。我们这样写：
+				
+				var logger = require('morgan');  //先安装 npm install morgan --save
+				
+				if( "development" == app.get('env) ){  //如果是开发环境
+					  app.set("showStackError", true);  //错误打印出来
+					  app.use(logger(':method:url:status'));  //打印出来的 中间件   请求的类型 url  状态
+					  app.local.pretty =  true;    //代码是格式化后的，可读性高
+					  mongoose.set('debug', true);    //mongoose debug开关打开，能看到查询... 
+				}
+				
+				然后在刷新页面，看看console.log内容
+			
+				
+		29、routes.js文件里面，要有点杂，我们需要进一步的优化
+				目录下新建app文件夹
+				把schemas  views models 文件夹放在app文件夹下面
+				注意目录的更改，app.js入口文件目录也随着更改
+				
+				接下来在app文件夹下建一个controllers文件夹，里面新建一个index.js,用来负责，关于首页的交互的路由；  新建一个user.js，负责跟用户有关的路由。新建一个movie.js
+				注意，依赖的注入。
+		
+		
+		30、用户权限的设置
+				我们回到用户mongoose模式里，
+				多添加一个键值：
+					role : Number    //角色   0：默认普通  1：verified邮件激活 2：professonal   >10：管理员admin   >50:高级管理员super admin 
+					
+					role : {
+						type :Number,
+						default : 0
+					}
+				
+				现在我希望，普通用户，不能看到我后台用户列表的页面
+				但是我们发现，实现过程中，有这么一个问题，
+				有很多路由里面，需要做判断，然后都是重复的，怎么优化？
+				利用中间件：
+					app.get('/admin/userlist',User_controller.loginRequire, User_controller.superAdminRequire, User_controller.userlist);		
+					
+				
+		31、设计评论的数据模型
+			在schemas文件夹里新建comment.js
+			字段：
+				评论人是谁
+				评论的是哪一部电影  存电影的id
+				回复给谁
+				评论的内容
+				
+				用到了ObjectId，作为文档的类型，主键。
+				Mongoose没有关联的
+				利用populate，通过引用ObjectId来关联的schemas, ref:"Movie"
+				
+				movie : { type : ObjectId, ref : "Movie" },
+				from : { type : ObjectId, ref : "User" },//评论来自于
+				to : { type : ObjectId, ref : "User" }, //评论给谁
+				content : String,
+				
+				
+				接下来到route.js路由里配置，请求：
+				app.post("/admin/comment", User_controller.signinRequired, Comment.save);
+				
+				当点击提交保存的时候，保存的数据是这样的：
+					 Mongoose: comments.insert({ movie: ObjectId("57b872f4e4cba1c0472600e4"), from: ObjectId("57b971998229bf885664de8a"), content: '我是王德顺，我是最炫东北人。', _id: ObjectId("57b971fe8229bf885664de8b"), meta: { updateAt: new Date("Sun, 21 Aug 2016 09:18:54 GMT"), createAt: new Date("Sun, 21 Aug 2016 09:15:10 GMT") }, __v: 0 })
+				这个时候，还没有加入to键值
+				
+				接下来有数据之后，就想办法渲染出来，我们可以通ajax异步的方式来实现，也可以通过路由回调的方式。
+				
+				
+		32，我访问mongoose一个模型movie的时候，我还想拿到comments的数据，怎么写：
+			Movie.findById(id, function(err, movie){
+				Comment
+					.find({movie : id})
+					.populate("from",'name')
+					.exec(function(err, comments){
+						console.log("xxxxxxxxxxxxx");
+						console.log(comments);
+						res.render('../app/views/pages/detail',{
+							title : "电影详情-----",
+							movie : movie,
+							comments : comments
+						});
+					})
+			})
+			
+			
+		33、回复的功能：
+			Comment模型，我们增加一个 replay数组
+			reply : [
+				{
+					from : {type:ObjectId, ref :"User"},
+					to : {type:ObjectId, ref:"User"},
+					content : String
+				}
+			] 
+			
+			当我点击头像的时候：
+				往form表单里再扔2个hidden, 一个是我是谁？ 一个是我评论谁？
+				点击提交的时候，
+					我要做一个事，就是把它保存到数据库里
+					如果没有2个hidden,意味着正常评论
+					如果有，意味着回复，根据这个id,从数据库中找到之前它正常评论的时候，保存的数据comment,  然后我要做的就是，往这条数据里的reply空数组里面，添加内容，内容就是提交进来的数据。 然后对这条数据，做一次重新保存save, 保存完成之后，就是回到当前电影页面， 回到当前页面之后，会进行渲染。
 */
 
 
